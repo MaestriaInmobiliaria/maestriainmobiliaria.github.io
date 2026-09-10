@@ -1,0 +1,77 @@
+codigo: "9008"
+titulo: "Departamento en Edificio Vivo Huerto, Huertos Familiares"
+operacion: venta
+tipo: departamento
+estado: disponible
+destacada: true
+precio: 2700
+moneda: UF
+comuna: "San Pedro de la Paz"
+ciudad: "Concepción"
+sector: "Huertos Familiares"
+dormitorios: 2
+banos: 2
+estacionamientos: 0
+superficie_util: 68
+superficie_terreno: 0
+caracteristicas:
+  - "Departamento en 1er piso, orientación poniente"
+  - "Dormitorio principal en suite con walk-in closet"
+  - "2 baños completos con tina"
+  - "Cocina de concepto abierto con cubierta de granito, encimera y horno"
+  - "Piso flotante en áreas sociales, balcón y logia"
+  - "Edificio con piscina, quinchos, juegos infantiles y acceso controlado"
+descripcion: |
+  **Vive donde siempre soñaste, en Edificio Vivo Huerto.**
+
+  Imagina despertar cada día en un entorno privilegiado, rodeado de naturaleza,
+  con amplias áreas verdes, jardines y una tranquilidad incomparable, sin
+  renunciar a la conectividad que necesitas. Este departamento en 1er piso y
+  orientación poniente combina diseño moderno, comodidad y una ubicación
+  estratégica en Huertos Familiares, uno de los sectores más cotizados de San
+  Pedro de la Paz.
+
+  **Ubicación y entorno:** barrio residencial tranquilo con rápido acceso al
+  Puente Juan Pablo II, cercano a universidades, centros educativos,
+  supermercados y servicios, con áreas verdes y espacios para caminar.
+
+  **Living-comedor:** espacio acogedor e iluminado con piso flotante. Su
+  orientación poniente permite disfrutar de cálidas tardes con luz natural.
+
+  **Cocina:** moderna cocina de concepto abierto integrada al living-comedor,
+  con piso cerámico, cubierta de granito y equipada con encimera y horno
+  eléctrico.
+
+  **Habitaciones:** 2 dormitorios bien distribuidos, el principal en suite con
+  walk-in closet.
+
+  **Baños:** 2 baños completos, ambos con tina y terminaciones modernas.
+
+  **Balcón y logia:** un balcón para disfrutar del aire libre y una logia
+  independiente que facilita las tareas del hogar.
+
+  **Equipamiento del edificio:** piscina, áreas verdes con paisajismo, quinchos
+  cerrados y al aire libre, juegos infantiles, conserjería y acceso controlado, e
+  iluminación LED en espacios comunes.
+fotos:
+  - 01.jpg
+  - 02.jpg
+  - 03.jpg
+  - 04.jpg
+  - 05.jpg
+  - 06.jpg
+  - 07.jpg
+  - 08.jpg
+  - 09.jpg
+  - 10.jpg
+  - 11.jpg
+  - 12.jpg
+  - 13.jpg
+  - 14.jpg
+  - 15.jpg
+  - 16.jpg
+  - 17.jpg
+agente: jonathan-fox
+url_convecta: ""
+lat: null
+lng: null

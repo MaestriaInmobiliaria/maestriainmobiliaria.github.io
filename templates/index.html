@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+{% import "_macros.html" as ui %}
+{% block title %}{{ site.nombre }} — Corredora de Propiedades en Concepción{% endblock %}
+{% block canonical %}/{% endblock %}
+
+{% block content %}
+<section class="hero">
+  {% set heros = site.hero_imagenes or ['/img/hero.jpg'] %}
+  <div class="hero-bgs" id="heroBgs" data-hero='{{ heros | tojson }}'>
+    <div class="hero-bg" style="background-image:url('{{ heros[0] }}')"></div>
+    <div class="hero-bg"></div>
+  </div>
+  <script>
+  (function () {
+    var w = document.getElementById("heroBgs");
+    if (!w) return;
+    var L; try { L = JSON.parse(w.dataset.hero); } catch (e) { return; }
+    if (!L.length) return;
+    var i = Math.floor(Math.random() * L.length);
+    var first = w.querySelector(".hero-bg");
+    first.style.backgroundImage = "url('" + L[i] + "')";
+    first.classList.add("is-on");
+    w.dataset.heroIdx = i;
+    for (var k = 0; k < L.length; k++) { (new Image()).src = L[k]; }
+  })();
+  </script>
+  <div class="hero-overlay"></div>
+  <div class="wrap hero-content">
+    <p class="eyebrow eyebrow-light">Concepción &middot; Gran Concepción</p>
+    <h1>Vende tu propiedad con método,<br>no con suerte.</h1>
+    <p class="hero-lead">
+      Asesoría experta para propietarios que quieren vender su casa o
+      departamento al mejor precio y en menos de 90 días.
+    </p>
+    <div class="hero-actions">
+      <a class="btn btn-gold" href="/vende-con-nosotros/">Quiero vender mi propiedad</a>
+      <a class="btn btn-ghost" href="/propiedades/">Ver propiedades</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Nuestro inventario</p>
+      <h2>Propiedades destacadas</h2>
+      <p class="section-sub">Una selección de las oportunidades disponibles hoy.</p>
+    </div>
+    {% if destacadas %}
+    <div class="grid-props">
+      {% for p in destacadas %}{{ ui.tarjeta(p) }}{% endfor %}
+    </div>
+    <div class="section-foot">
+      <a class="btn btn-outline" href="/propiedades/">Ver todas las propiedades ({{ total }})</a>
+    </div>
+    {% else %}
+    <p class="empty">Estamos actualizando el inventario. Escríbenos y te contamos qué tenemos disponible.</p>
+    {% endif %}
+  </div>
+</section>
+
+<section class="section section-dark">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow eyebrow-light">Por qué Maestría</p>
+      <h2>Un proceso profesional de principio a fin</h2>
+    </div>
+    <div class="grid-3 pilares">
+      <div class="pilar">
+        <span class="pilar-num">01</span>
+        <h3>Evaluación comercial real</h3>
+        <p>Definimos el precio con un estudio de mercado y comparables de la zona, no con una corazonada.</p>
+      </div>
+      <div class="pilar">
+        <span class="pilar-num">02</span>
+        <h3>Marketing que se ve caro</h3>
+        <p>Fotografía profesional, fichas cuidadas y difusión en los principales portales y redes.</p>
+      </div>
+      <div class="pilar">
+        <span class="pilar-num">03</span>
+        <h3>Acompañamiento hasta la escritura</h3>
+        <p>Coordinamos visitas, negociación, estudio de títulos y firma. Tú te enteras, nosotros gestionamos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap cta-band">
+    <div>
+      <h2>¿Cuánto vale tu propiedad?</h2>
+      <p>Te preparamos una estimación de valor comercial sin costo ni compromiso.</p>
+    </div>
+    <a class="btn btn-gold" href="/contacto/">Solicitar estimación</a>
+  </div>
+</section>
+{% endblock %}

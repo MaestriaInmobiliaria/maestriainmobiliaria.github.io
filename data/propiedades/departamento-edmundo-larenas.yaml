@@ -1,0 +1,68 @@
+codigo: "9074"
+titulo: "Departamento cerca de la UdeC — Edmundo Larenas"
+operacion: venta
+tipo: departamento
+estado: disponible
+destacada: false
+precio: 2750
+moneda: UF
+comuna: "Concepción"
+ciudad: "Concepción"
+sector: "Barrio Universitario"
+dormitorios: 1
+banos: 1
+estacionamientos: 0
+superficie_util: 35
+superficie_terreno: 0
+caracteristicas:
+  - "Dormitorio principal en suite"
+  - "Bodega y balcón"
+  - "Orientación con sol de mañana"
+  - "Cocina eléctrica y comedor de diario"
+  - "Edificio con ascensor, conserjería 24/7, cámaras y bicicletero"
+  - "Apto para crédito hipotecario, admite mascotas"
+  - "Sin estacionamiento"
+descripcion: |
+  **Departamento en venta en Concepción, con ubicación estratégica cerca de la
+  UdeC y el Hospital Regional.**
+
+  ¿Buscas un departamento cómodo, bien ubicado y con excelente conectividad en
+  Concepción? Esta es una excelente oportunidad para vivir o invertir en uno de
+  los sectores con mayor demanda de la ciudad.
+
+  Ubicado a pasos de la Universidad de Concepción, del Hospital Regional y del
+  Terminal de Buses, este acogedor departamento combina comodidad, seguridad y
+  una ubicación privilegiada.
+
+  **Dormitorio principal en suite:** amplio y confortable, con baño en suite,
+  clóset y una agradable orientación que recibe el sol de la mañana.
+
+  **Living comedor:** espacio funcional y luminoso con salida a balcón.
+
+  **Cocina:** cocina eléctrica con práctico comedor de diario.
+
+  **Características:** 1 dormitorio en suite, 1 baño, bodega, balcón, cocina
+  eléctrica, comedor de diario, línea telefónica, acceso a internet, apto para
+  crédito hipotecario, admite mascotas y sin estacionamiento.
+
+  **Equipamiento del condominio:** ascensor, conserjería 24/7, cámaras de
+  seguridad, bicicletero, estacionamientos de visitas y accesos controlados.
+
+  **Entorno:** acceso caminando a la Universidad de Concepción, Hospital
+  Regional, Terminal de Buses, supermercados, centros médicos, farmacias y
+  comercio en general, con locomoción colectiva a pocos pasos.
+fotos:
+  - 01.jpg
+  - 02.jpg
+  - 03.jpg
+  - 04.jpg
+  - 05.jpg
+  - 06.jpg
+  - 07.jpg
+  - 08.jpg
+  - 09.jpg
+  - 10.jpg
+agente: jonathan-fox
+url_convecta: ""
+lat: null
+lng: null

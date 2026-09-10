@@ -1,0 +1,59 @@
+codigo: "9289"
+titulo: "Casa en arriendo en Villa El Rosario"
+operacion: arriendo
+tipo: casa
+estado: disponible
+destacada: false
+precio: 750000
+moneda: CLP
+comuna: "San Pedro de la Paz"
+ciudad: "Concepción"
+sector: "Villa El Rosario"
+dormitorios: 5
+banos: 3
+estacionamientos: 1
+superficie_util: 240
+superficie_terreno: 240
+caracteristicas:
+  - "5 dormitorios amplios"
+  - "3 baños"
+  - "2 pisos"
+  - "Terraza de 16 m²"
+  - "Piso flotante en dormitorios"
+  - "Orientación sur, muy luminosa"
+  - "Sector residencial consolidado"
+descripcion: |
+  Se arrienda espaciosa casa en Villa El Rosario, ubicada en la comuna de San
+  Pedro de la Paz. Esta propiedad cuenta con un total de 5 dormitorios y 3 baños,
+  distribuidos de manera equitativa en sus 240 m² de terreno y 240 m² totales.
+
+  La orientación sur de la casa permite disfrutar de una excelente iluminación
+  natural durante todo el día, creando ambientes acogedores y confortables.
+  Además, su amplio espacio interior brinda la comodidad necesaria para una
+  familia numerosa o para quienes buscan un lugar con espacio suficiente para
+  todas sus necesidades.
+
+  Con una ubicación privilegiada en una de las zonas residenciales más cotizadas
+  de la comuna, esta propiedad es una excelente opción para quienes buscan
+  tranquilidad, seguridad y cercanía a servicios y comercios.
+fotos:
+  - 01.jpg
+  - 02.jpg
+  - 03.jpg
+  - 04.jpg
+  - 05.jpg
+  - 06.jpg
+  - 07.jpg
+  - 08.jpg
+  - 09.jpg
+  - 10.jpg
+  - 11.jpg
+  - 12.jpg
+  - 13.jpg
+  - 14.jpg
+  - 15.jpg
+  - 16.jpg
+agente: jonathan-fox
+url_convecta: ""
+lat: null
+lng: null

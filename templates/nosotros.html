@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block title %}Nosotros — {{ site.nombre }}{% endblock %}
+{% block description %}Somos una corredora de propiedades de Concepción enfocada en propietarios. Conoce al equipo de Maestría Inmobiliaria.{% endblock %}
+{% block canonical %}/nosotros/{% endblock %}
+
+{% block content %}
+<section class="page-hero">
+  <div class="wrap">
+    <p class="eyebrow eyebrow-light">Quiénes somos</p>
+    <h1>Maestría Inmobiliaria</h1>
+    <p class="page-hero-lead">Una corredora de propiedades del Gran Concepción, enfocada en acompañar a los propietarios en la venta de su patrimonio con estándar profesional.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap grid-2">
+    <div>
+      <h2>Nuestra forma de trabajar</h2>
+      <p>Creemos que vender una propiedad no debería ser un salto al vacío. Por eso trabajamos con método: partimos por entender el inmueble y su mercado, fijamos un precio con fundamento y preparamos una presentación que le haga justicia.</p>
+      <p>Cada propiedad tiene un agente responsable que coordina todo el proceso, desde el avalúo hasta la firma de la escritura.</p>
+    </div>
+    <div>
+      <h2>Dónde operamos</h2>
+      <p>Concepción y el Gran Concepción: San Pedro de la Paz, Talcahuano, Hualpén, Chiguayante, Penco y sectores cercanos.</p>
+      <ul class="check">
+        <li>Casas y departamentos</li>
+        <li>Venta y arriendo</li>
+        <li>Asesoría a compradores</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section section-soft">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">El equipo</p>
+      <h2>Agentes de Maestría</h2>
+    </div>
+    <div class="grid-3 equipo">
+      {% for a in agentes %}
+      <article class="agente">
+        <img src="{{ a.foto }}" alt="{{ a.nombre }}" width="300" height="350" loading="lazy">
+        <h3>{{ a.nombre }}</h3>
+        <p class="agente-cargo">{{ a.cargo }}</p>
+        <p>{{ a.bio }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap cta-band">
+    <div>
+      <h2>Conversemos sobre tu propiedad</h2>
+      <p>Sin costo y sin compromiso.</p>
+    </div>
+    <a class="btn btn-gold" href="/contacto/">Contactar</a>
+  </div>
+</section>
+{% endblock %}

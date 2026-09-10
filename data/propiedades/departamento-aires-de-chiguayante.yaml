@@ -1,0 +1,68 @@
+codigo: "9157"
+titulo: "Departamento en Condominio Aires de Chiguayante"
+operacion: venta
+tipo: departamento
+estado: disponible
+destacada: false
+precio: 1907
+moneda: UF
+comuna: "Chiguayante"
+ciudad: "Concepción"
+sector: "Condominio Aires de Chiguayante"
+dormitorios: 3
+banos: 1
+estacionamientos: 1
+superficie_util: 52
+superficie_terreno: 0
+caracteristicas:
+  - "Departamento en 1er piso"
+  - "Condominio con acceso controlado y cámaras de seguridad"
+  - "Amplias áreas verdes, sala de eventos, quincho y juegos infantiles"
+  - "1 estacionamiento privado"
+  - "Logia con conexión para lavadora"
+  - "Admite mascotas"
+descripcion: |
+  ¿Buscas un departamento cómodo, seguro y con excelente conectividad? Esta es la
+  oportunidad que estabas esperando.
+
+  Ubicado en el exclusivo Condominio Aires de Chiguayante, este acogedor
+  departamento en 1er piso ofrece la comodidad ideal para familias, adultos
+  mayores o quienes buscan una excelente inversión en una zona de alta plusvalía.
+
+  **Características de la propiedad:** 52 m² construidos aprox., departamento en
+  1er piso, 3 dormitorios, 1 baño, living-comedor, cocina, comedor diario, logia
+  con conexión para lavadora, 1 estacionamiento privado y admite mascotas.
+
+  **Condominio:** acceso controlado, cámaras de seguridad, amplias áreas verdes,
+  sala de eventos, quincho, juegos infantiles y estacionamientos para visitas, en
+  un ambiente tranquilo y familiar.
+
+  **Ubicación:** excelente conectividad y locomoción, cercano a supermercados,
+  colegios, jardines infantiles, centros de salud, comercio y diversos servicios.
+
+  Ideal para familias, primera vivienda o inversión.
+fotos:
+  - 01.jpg
+  - 02.jpg
+  - 03.jpg
+  - 04.jpg
+  - 05.jpg
+  - 06.jpg
+  - 07.jpg
+  - 08.jpg
+  - 09.jpg
+  - 10.jpg
+  - 11.jpg
+  - 12.jpg
+  - 13.jpg
+  - 14.jpg
+  - 15.jpg
+  - 16.jpg
+  - 17.jpg
+  - 18.jpg
+  - 19.jpg
+  - 20.jpg
+agente: jonathan-fox
+url_convecta: ""
+lat: null
+lng: null

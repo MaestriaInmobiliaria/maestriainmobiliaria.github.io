@@ -1,0 +1,22 @@
+{% macro tarjeta(p) %}
+<article class="card-prop{% if p.estado != 'disponible' %} is-{{ p.estado }}{% endif %}">
+  <a class="card-prop-media" href="{{ p.url }}">
+    <img src="{{ p.portada }}" alt="{{ p.titulo }}" loading="lazy" width="600" height="400">
+    <span class="card-prop-op">{{ p.operacion_label }}</span>
+    {% if p.estado == 'reservada' %}<span class="card-prop-estado">Reservada</span>{% endif %}
+    {% if p.estado == 'vendida' %}<span class="card-prop-estado">Vendida</span>{% endif %}
+  </a>
+  <div class="card-prop-body">
+    <p class="card-prop-tipo">{{ p.tipo_label }}{% if p.sector %} &middot; {{ p.sector }}{% endif %}</p>
+    <h3 class="card-prop-title"><a href="{{ p.url }}">{{ p.titulo }}</a></h3>
+    <p class="card-prop-loc">{{ p.comuna }}{% if p.ciudad and p.ciudad != p.comuna %}, {{ p.ciudad }}{% endif %}</p>
+    <p class="card-prop-precio">{{ p.precio_fmt }}</p>
+    <ul class="card-prop-specs">
+      {% if p.dormitorios %}<li>{{ p.dormitorios }} dorm.</li>{% endif %}
+      {% if p.banos %}<li>{{ p.banos }} baños</li>{% endif %}
+      {% if p.superficie_util %}<li>{{ p.superficie_util }} m² útiles</li>{% endif %}
+      {% if p.superficie_terreno %}<li>{{ p.superficie_terreno }} m² terreno</li>{% endif %}
+    </ul>
+  </div>
+</article>
+{% endmacro %}

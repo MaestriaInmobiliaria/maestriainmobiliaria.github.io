@@ -1,0 +1,82 @@
+codigo: "9425"
+titulo: "Casa en condominio Brisas de San Pedro"
+operacion: venta
+tipo: casa
+estado: disponible
+destacada: true
+precio: 2372
+moneda: UF
+comuna: "San Pedro de la Paz"
+ciudad: "Concepción"
+sector: "Condominio Brisas de San Pedro"
+dormitorios: 3
+banos: 2
+estacionamientos: 2
+superficie_util: 87
+superficie_terreno: 120
+caracteristicas:
+  - "Condominio cerrado con seguridad 24/7, cerco eléctrico y cámaras"
+  - "2 pisos, construida en 2018"
+  - "Patio privado de uso exclusivo"
+  - "Garage para 2 vehículos más estacionamiento de visitas"
+  - "Bodega"
+  - "Piso porcelanato en áreas comunes, alfombra en dormitorios"
+  - "Agua caliente por calefont, gas balón"
+  - "Gastos comunes: $40.000"
+  - "Apta para crédito hipotecario"
+descripcion: |
+  Imagina llegar cada tarde a tu propia casa dentro de un condominio cerrado,
+  seguro y pensado para la vida en familia. En Brisas de San Pedro, San Pedro de
+  la Paz, esta casa de 87 m² construidos, distribuidos en dos pisos, con 3
+  dormitorios y 2 baños, ofrece el espacio y la tranquilidad que buscas sin
+  salir de la ciudad.
+
+  **Living y comedor:** un espacio integrado y luminoso, con piso porcelanato de
+  principio a fin, pensado para compartir en familia o recibir visitas con
+  comodidad.
+
+  **Cocina:** cocina integrada con piso porcelanato, agua caliente por calefont y
+  conexión a gas cilindro. Suma un comedor de diario junto a la cocina, perfecto
+  para los desayunos y almuerzos del día a día.
+
+  **Dormitorios:** 3 dormitorios con piso alfombrado que aportan calidez, más un
+  closet. Distribuidos en el segundo piso, garantizan la privacidad de cada
+  integrante de la familia.
+
+  **Baños:** 2 baños completos con piso cerámico, con terminaciones simples y
+  funcionales para el uso diario.
+
+  **Patio y loggia:** un amplio patio privado de uso y goce exclusivo, ideal para
+  tardes al aire libre, asados de fin de semana o para que niños y mascotas
+  jueguen sin preocupaciones. Suma una loggia como espacio de transición
+  cubierto.
+
+  **Estacionamientos y bodega:** garage con capacidad para 2 vehículos, más un
+  estacionamiento adicional para visitas, y una bodega.
+
+  **Condominio y entorno:** condominio cerrado con seguridad 24/7, cerco
+  eléctrico, cámaras de vigilancia y conserjería, más áreas con jardines
+  formados y juegos infantiles.
+
+  Construida en 2018, esta casa está apta para crédito hipotecario. Agenda tu
+  visita y descubre por qué Brisas de San Pedro puede ser el próximo hogar de tu
+  familia.
+fotos:
+  - 01.jpg
+  - 02.jpg
+  - 03.jpg
+  - 04.jpg
+  - 05.jpg
+  - 06.jpg
+  - 07.jpg
+  - 08.jpg
+  - 09.jpg
+  - 10.jpg
+  - 11.jpg
+  - 12.jpg
+  - 13.jpg
+  - 14.jpg
+agente: jonathan-fox
+url_convecta: ""
+lat: null
+lng: null

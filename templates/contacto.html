@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% block title %}Contacto — {{ site.nombre }}{% endblock %}
+{% block description %}Escríbenos para vender, comprar o arrendar una propiedad en Concepción y el Gran Concepción.{% endblock %}
+{% block canonical %}/contacto/{% endblock %}
+
+{% block content %}
+<section class="page-hero page-hero-sm">
+  <div class="wrap">
+    <p class="eyebrow eyebrow-light">Hablemos</p>
+    <h1>Contacto</h1>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap grid-2 contacto-grid">
+    <div>
+      <h2>Cuéntanos qué necesitas</h2>
+      <p>Respondemos dentro del horario de atención: {{ site.contacto.horario }}.</p>
+      <form class="form" id="formContacto"
+            {% if site.formspree_endpoint %}action="{{ site.formspree_endpoint }}" method="POST"{% endif %}>
+        <label>Nombre
+          <input type="text" name="nombre" required autocomplete="name">
+        </label>
+        <label>Email
+          <input type="email" name="email" required autocomplete="email">
+        </label>
+        <label>Teléfono / WhatsApp
+          <input type="tel" name="telefono" autocomplete="tel">
+        </label>
+        <label>¿En qué te ayudamos?
+          <select name="motivo">
+            <option>Quiero vender una propiedad</option>
+            <option>Quiero arrendar mi propiedad</option>
+            <option>Busco comprar</option>
+            <option>Busco arrendar</option>
+            <option>Otra consulta</option>
+          </select>
+        </label>
+        <label>Mensaje
+          <textarea name="mensaje" rows="4" required></textarea>
+        </label>
+        <input type="hidden" name="propiedad" id="campoPropiedad">
+        <button type="submit" class="btn btn-gold">Enviar mensaje</button>
+        <p class="form-nota" id="formNota" hidden></p>
+        {% if not site.formspree_endpoint %}
+        <p class="form-aviso">El envío del formulario aún no está conectado. Mientras tanto, escríbenos directo a
+          <a href="mailto:{{ site.contacto.email }}">{{ site.contacto.email }}</a>.</p>
+        {% endif %}
+      </form>
+    </div>
+
+    <aside class="contacto-datos">
+      <h2>Datos de contacto</h2>
+      <ul>
+        <li><span>Email</span><a href="mailto:{{ site.contacto.email }}">{{ site.contacto.email }}</a></li>
+        {% if site.contacto.telefono %}<li><span>Teléfono</span><a href="tel:{{ site.contacto.telefono | replace(' ','') }}">{{ site.contacto.telefono }}</a></li>{% endif %}
+        {% if site.contacto.whatsapp %}<li><span>WhatsApp</span><a href="https://wa.me/{{ site.contacto.whatsapp }}" target="_blank" rel="noopener">Escribir por WhatsApp</a></li>{% endif %}
+        <li><span>Horario</span>{{ site.contacto.horario }}</li>
+        <li><span>Zona</span>{{ site.contacto.ciudad }}</li>
+      </ul>
+      {% if site.redes.youtube %}
+      <a class="btn btn-outline btn-block" href="{{ site.redes.youtube }}" target="_blank" rel="noopener">Ver nuestro canal de YouTube</a>
+      {% endif %}
+    </aside>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,77 @@
+codigo: "9004"
+titulo: "Departamento en Edificio Parque Lomas, Lomas San Sebastián"
+operacion: venta
+tipo: departamento
+estado: disponible
+destacada: true
+precio: 3490
+moneda: UF
+comuna: "Concepción"
+ciudad: "Concepción"
+sector: "Lomas San Sebastián"
+dormitorios: 2
+banos: 2
+estacionamientos: 1
+superficie_util: 52
+superficie_terreno: 0
+caracteristicas:
+  - "Ubicado en el 5º piso"
+  - "Dormitorio principal en suite"
+  - "2 baños completos, uno en suite con tina"
+  - "Cocina americana equipada con encimera y horno empotrado"
+  - "Piso flotante, balcón con orientación nororiente"
+  - "Incluye estacionamiento y bodega"
+  - "Edificio con gimnasio, quincho, salón multiuso y acceso controlado"
+descripcion: |
+  **Vive la tranquilidad y el estilo que mereces.**
+
+  Descubre este moderno y acogedor departamento en el Edificio Parque Lomas,
+  ubicado en el 5º piso de uno de los sectores con mayor plusvalía de
+  Concepción: Lomas San Sebastián. Ideal para vivir o invertir, combina
+  comodidad, funcionalidad y una excelente ubicación.
+
+  **Living-comedor:** amplio espacio integrado con piso flotante y excelente
+  iluminación natural.
+
+  **Cocina americana:** moderna y funcional, equipada con encimera, horno
+  empotrado, mobiliario moderno y una amplia cubierta tipo comedor diario.
+
+  **Dormitorios:** habitaciones cómodas y luminosas con piso flotante, con
+  dormitorio principal en suite.
+
+  **Baños:** 2 baños completos, uno de ellos en suite con tina.
+
+  **Balcón:** amplio balcón con orientación nororiente, ideal para disfrutar del
+  sol de la mañana.
+
+  **Incluye:** estacionamiento y bodega.
+
+  **Amenidades del edificio:** conserjería y acceso controlado, gimnasio,
+  quincho, salón multiuso y áreas comunes modernas. Pet friendly.
+
+  **Entorno:** excelente conectividad, cercanía al Mall Plaza Trébol, rápido
+  acceso al aeropuerto, supermercados, farmacias y múltiples servicios.
+fotos:
+  - 01.jpg
+  - 02.jpg
+  - 03.jpg
+  - 04.jpg
+  - 05.jpg
+  - 06.jpg
+  - 07.jpg
+  - 08.jpg
+  - 09.jpg
+  - 10.jpg
+  - 11.jpg
+  - 12.jpg
+  - 13.jpg
+  - 14.jpg
+  - 15.jpg
+  - 16.jpg
+  - 17.jpg
+  - 18.jpg
+  - 19.jpg
+agente: jonathan-fox
+url_convecta: ""
+lat: null
+lng: null

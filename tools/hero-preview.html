@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Comparar encabezados — Maestría</title>
+<style>
+  :root{--verde:#022F2A;--dorado:#c6a15b;--dorado-claro:#e3c58b;--marfil:#f5efe3;--blanco:#fff}
+  *{box-sizing:border-box;margin:0}
+  body{font-family:Montserrat,system-ui,sans-serif;background:#111;color:#eee;padding:24px}
+  h1{font-weight:600;font-size:1.1rem;margin-bottom:4px}
+  p.sub{color:#999;font-size:.85rem;margin-bottom:20px}
+  .tabs{display:flex;gap:8px;margin-bottom:16px}
+  .tabs button{background:#222;color:#ccc;border:1px solid #333;padding:8px 16px;border-radius:4px;cursor:pointer;font:inherit}
+  .tabs button.on{background:var(--dorado);color:var(--verde);border-color:var(--dorado);font-weight:600}
+  .hero{position:relative;height:440px;border-radius:6px;overflow:hidden;margin-bottom:10px}
+  .hero .bg{position:absolute;inset:0;background-size:cover;background-position:center;transition:opacity .6s}
+  .hero .ov{position:absolute;inset:0;background:
+     linear-gradient(180deg,rgba(2,47,42,.42),rgba(2,47,42,.58) 45%,rgba(2,47,42,.88)),
+     radial-gradient(120% 90% at 20% 40%,rgba(2,47,42,.30),rgba(2,47,42,0) 60%)}
+  .hero .txt{position:absolute;left:40px;bottom:60px;color:#fff;max-width:520px}
+  .hero .eyebrow{color:var(--dorado-claro);letter-spacing:.15em;font-size:.7rem;text-transform:uppercase}
+  .hero h2{font-family:"Cormorant Garamond",Georgia,serif;font-size:2.4rem;font-weight:500;line-height:1.1;margin:.3rem 0}
+  .hero .lead{color:rgba(245,239,227,.9);font-size:.95rem}
+  .strip{display:flex;gap:8px}
+  .strip img{width:33.33%;height:90px;object-fit:cover;border-radius:4px;cursor:pointer;opacity:.55;border:2px solid transparent}
+  .strip img.on{opacity:1;border-color:var(--dorado)}
+  .note{color:#888;font-size:.8rem;margin-top:14px}
+</style>
+</head>
+<body>
+<h1>Comparar los grupos para el encabezado</h1>
+<p class="sub">Cada grupo son 3 fotos que rotarían al azar. La franja de abajo deja fijar una para verla completa. También puedes pedir un mix (ej. a1 + b2 + d3).</p>
+<div class="tabs" id="tabs"></div>
+<div class="hero">
+  <div class="bg" id="bg"></div>
+  <div class="ov"></div>
+  <div class="txt">
+    <div class="eyebrow">Concepción · Gran Concepción</div>
+    <h2>Vende tu propiedad con método,<br>no con suerte.</h2>
+    <div class="lead">Asesoría experta para propietarios que quieren vender su casa o departamento al mejor precio y en menos de 90 días.</div>
+  </div>
+</div>
+<div class="strip" id="strip"></div>
+<p class="note">A = arquitectura + interior + entorno · B = 3 fachadas · C = 3 interiores · D = puente/tren, ciudad, Laguna Grande</p>
+<script>
+  const groups={
+    A:["a1","a2","a3"], B:["b1","b2","b3"], C:["c1","c2","c3"],
+    D:["d1","d2","d3"], E:["e1","e2","e3"]
+  };
+  const labels={A:"Grupo A · mixto",B:"Grupo B · fachadas",C:"Grupo C · interiores",
+    D:"Grupo D · Gran Concepción",E:"Grupo E · puente ferroviario"};
+  let cur="A", timer=null, idx=0;
+  const bg=document.getElementById("bg"), strip=document.getElementById("strip"), tabs=document.getElementById("tabs");
+  function src(k){return "../assets/img/hero/"+k+".jpg";}
+  function show(k){bg.style.backgroundImage="url('"+src(k)+"')";
+    [...strip.children].forEach(im=>im.classList.toggle("on", im.dataset.k===k));}
+  function rotate(){idx=(idx+1)%groups[cur].length; show(groups[cur][idx]);}
+  function pick(g){cur=g; idx=0;
+    [...tabs.children].forEach(b=>b.classList.toggle("on",b.dataset.g===g));
+    strip.innerHTML="";
+    groups[g].forEach(k=>{const im=new Image();im.src=src(k);im.dataset.k=k;
+      im.onclick=()=>{clearInterval(timer);timer=null;show(k);};strip.appendChild(im);});
+    show(groups[g][0]);
+    clearInterval(timer); timer=setInterval(rotate,2600);
+  }
+  Object.keys(groups).forEach(g=>{const b=document.createElement("button");
+    b.textContent=labels[g];b.dataset.g=g;b.onclick=()=>pick(g);tabs.appendChild(b);});
+  pick("A");
+</script>
+</body>
+</html>

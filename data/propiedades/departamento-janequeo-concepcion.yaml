@@ -1,0 +1,68 @@
+codigo: "9154"
+titulo: "Departamento en Janequeo, Concepción"
+operacion: venta
+tipo: departamento
+estado: disponible
+destacada: false
+precio: 2079
+moneda: UF
+comuna: "Concepción"
+ciudad: "Concepción"
+sector: "Janequeo — Las Tres Pascualas"
+dormitorios: 1
+banos: 1
+estacionamientos: 0
+superficie_util: 40
+superficie_terreno: 0
+caracteristicas:
+  - "Ubicado en el piso 22, orientación noroeste"
+  - "Año 2016"
+  - "Balcón"
+  - "Cocina con conexión para lavadora"
+  - "Edificio con ascensor, lavandería, sala de estudio, sala de eventos y conserjería"
+  - "Gastos comunes: $60.000 aprox."
+  - "Sin estacionamiento ni bodega"
+  - "A pasos de la Laguna Las Tres Pascualas"
+descripcion: |
+  **Tu espacio ideal en Concepción sí existe… y está en Janequeo.**
+
+  Imagina vivir en un departamento donde la comodidad, la conectividad y la luz
+  natural forman parte de tu día a día. Ubicado en el sector Janequeo de
+  Concepción, esta propiedad ofrece una excelente oportunidad para quienes buscan
+  calidad de vida o una inversión con gran potencial de arriendo.
+
+  Su orientación noroeste permite disfrutar de una agradable iluminación natural
+  durante gran parte del día. Cuenta con 1 dormitorio con clóset, 1 baño,
+  living-comedor, cocina con conexión para lavadora y balcón. El edificio dispone
+  de ascensor, lavandería, sala de estudio, sala de eventos, conserjería, cámaras
+  de seguridad y admite mascotas.
+
+  Ubicado estratégicamente cerca de Avenida Paicaví, locomoción colectiva,
+  universidades, colegios, supermercados, centros de salud y el Hospital Regional
+  de Concepción. Además, se encuentra a pasos de la Laguna Las Tres Pascualas,
+  uno de los sectores más valorados de la ciudad.
+
+  **Características:** ubicado en el piso 22, 1 dormitorio, 1 baño, 1 balcón,
+  orientación noroeste, año 2016, gastos comunes $60.000 aprox., sin
+  estacionamiento y sin bodega.
+
+  Una excelente alternativa para profesionales, estudiantes, parejas jóvenes o
+  inversionistas que buscan una propiedad con ubicación privilegiada y alta
+  demanda de arriendo.
+fotos:
+  - 01.jpg
+  - 02.jpg
+  - 03.jpg
+  - 04.jpg
+  - 05.jpg
+  - 06.jpg
+  - 07.jpg
+  - 08.jpg
+  - 09.jpg
+  - 10.jpg
+  - 11.jpg
+  - 12.jpg
+agente: jonathan-fox
+url_convecta: ""
+lat: null
+lng: null

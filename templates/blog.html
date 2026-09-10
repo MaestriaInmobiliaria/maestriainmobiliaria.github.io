@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Blog — {{ site.nombre }}{% endblock %}
+{% block description %}Consejos para vender, comprar y arrendar propiedades en Concepción.{% endblock %}
+{% block canonical %}/blog/{% endblock %}
+
+{% block content %}
+<section class="page-hero page-hero-sm">
+  <div class="wrap">
+    <p class="eyebrow eyebrow-light">Recursos</p>
+    <h1>Blog</h1>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    {% if posts %}
+    <div class="grid-3 blog-list">
+      {% for post in posts %}
+      <article class="blog-card">
+        {% if post.imagen %}<a href="{{ post.url }}"><img src="{{ post.imagen }}" alt="{{ post.titulo }}" loading="lazy"></a>{% endif %}
+        {% if post.fecha %}<p class="blog-fecha">{{ post.fecha }}</p>{% endif %}
+        <h3><a href="{{ post.url }}">{{ post.titulo }}</a></h3>
+        {% if post.resumen %}<p>{{ post.resumen }}</p>{% endif %}
+        <a class="link-mas" href="{{ post.url }}">Leer más</a>
+      </article>
+      {% endfor %}
+    </div>
+    {% else %}
+    <p class="empty">Pronto publicaremos contenido. Mientras tanto, escríbenos si tienes dudas sobre tu propiedad.</p>
+    {% endif %}
+  </div>
+</section>
+{% endblock %}

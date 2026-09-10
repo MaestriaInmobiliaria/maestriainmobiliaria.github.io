@@ -1,0 +1,81 @@
+codigo: "9200"
+titulo: "Casa en San Pedro de la Costa"
+operacion: venta
+tipo: casa
+estado: disponible
+destacada: true
+precio: 1467
+moneda: UF
+comuna: "San Pedro de la Paz"
+ciudad: "Concepción"
+sector: "San Pedro de la Costa, Etapa 1"
+dormitorios: 4
+banos: 2
+estacionamientos: 2
+superficie_util: 122
+superficie_terreno: 84
+caracteristicas:
+  - "Casa pareada de 2 pisos"
+  - "100% regularizada, acepta subsidio"
+  - "2 estacionamientos privados"
+  - "Bodega para almacenamiento"
+  - "Orientación oriente"
+  - "Lista para habitar"
+  - "Excelente conectividad hacia Concepción y Coronel"
+descripcion: |
+  **Amplitud, comodidad y excelente ubicación en San Pedro de la Costa.**
+
+  Casa de 2 pisos con 4 dormitorios, 2 estacionamientos, bodega y lista para
+  habitar. Hay hogares que simplemente se visitan… y otros donde desde el primer
+  instante puedes imaginar a tu familia disfrutando cada espacio.
+
+  Esta acogedora casa ubicada en San Pedro de la Costa Etapa 1, San Pedro de la
+  Paz, ofrece amplitud, comodidad y una excelente conectividad, siendo una
+  alternativa ideal para familias que buscan un lugar seguro y tranquilo. Además,
+  la propiedad se encuentra 100% regularizada, acepta subsidio y está lista para
+  convertirse en tu próximo hogar.
+
+  **Ubicación estratégica:** vive en uno de los sectores con mayor crecimiento de
+  San Pedro de la Paz. Excelente locomoción colectiva, cercana a supermercados,
+  colegios y jardines infantiles, áreas verdes, comercio y servicios, centros de
+  salud y rápida conexión hacia Concepción y Coronel.
+
+  **Living y comedor:** amplio y cómodo espacio pensado para compartir en familia.
+
+  **Cocina:** cocina independiente, cómoda y funcional, con una distribución que
+  facilita el trabajo diario.
+
+  **Dormitorios:** 4 dormitorios con buena iluminación natural, espacio suficiente
+  para toda la familia o para sala de estudio y habitación de visitas.
+
+  **Baños:** 2 baños completamente funcionales, con pisos cerámicos.
+
+  **Estacionamiento:** capacidad para 2 vehículos dentro de la propiedad,
+  entregando comodidad y mayor seguridad.
+
+  **Bodega:** espacio ideal para guardar herramientas, bicicletas y artículos de
+  temporada.
+
+  **Exterior:** espacio exterior ideal para reuniones familiares, juegos
+  infantiles o futuros proyectos de ampliación, en un entorno residencial pensado
+  para la vida en familia.
+fotos:
+  - 01.jpg
+  - 02.jpg
+  - 03.jpg
+  - 04.jpg
+  - 05.jpg
+  - 06.jpg
+  - 07.jpg
+  - 08.jpg
+  - 09.jpg
+  - 10.jpg
+  - 11.jpg
+  - 12.jpg
+  - 13.jpg
+  - 14.jpg
+  - 15.jpg
+agente: jonathan-fox
+url_convecta: ""
+lat: null
+lng: null

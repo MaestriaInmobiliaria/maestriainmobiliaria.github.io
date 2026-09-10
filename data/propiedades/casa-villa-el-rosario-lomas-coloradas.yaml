@@ -1,0 +1,78 @@
+codigo: "9009"
+titulo: "Casa en Villa El Rosario II, Lomas Coloradas"
+operacion: venta
+tipo: casa
+estado: disponible
+destacada: true
+precio: 3130
+moneda: UF
+comuna: "San Pedro de la Paz"
+ciudad: "Concepción"
+sector: "Villa El Rosario II — Lomas Coloradas"
+dormitorios: 5
+banos: 3
+estacionamientos: 1
+superficie_util: 240
+superficie_terreno: 240
+caracteristicas:
+  - "5 dormitorios amplios"
+  - "3 baños completos con tina más baño de visitas"
+  - "2 pisos, terraza de 16 m²"
+  - "Piso cerámico en áreas sociales"
+  - "Sector residencial consolidado en Lomas Coloradas"
+  - "A minutos de la estación del Biotrén y de la Ruta 160"
+descripcion: |
+  **¡La casa ideal para tu familia sí existe, y está en Villa El Rosario!**
+
+  Imagina despertar cada día en una casa donde el espacio, la luz natural y la
+  tranquilidad se combinan con una excelente conectividad. Esta propiedad en
+  Villa El Rosario II, San Pedro de la Paz, es el lugar donde tu familia crecerá
+  y donde cada rincón está pensado para disfrutar.
+
+  **Living:** amplio, luminoso y acogedor, con piso cerámico que aporta elegancia
+  y fácil mantención.
+
+  **Comedor:** integrado de manera funcional con la distribución del hogar, ideal
+  para reuniones familiares o cenas especiales.
+
+  **Cocina:** cocina independiente, práctica y bien distribuida, con salida
+  directa a un acogedor comedor familiar.
+
+  **Habitaciones:** 5 amplias habitaciones, ideales para una familia grande o
+  para quienes buscan espacio extra para oficina, estudio o visitas.
+
+  **Baños:** 3 baños completos con tina y cerámicos, más un práctico baño de
+  visitas.
+
+  **Entorno y ubicación:** Villa El Rosario II, un sector residencial tranquilo y
+  consolidado en Lomas Coloradas, a solo minutos de la estación del Biotrén y
+  cercano a la Ruta 160, facilitando la conexión con Concepción y Coronel.
+  Cercanía a colegios, comercio local y servicios esenciales.
+
+  Terminaciones modernas y excelente estado de conservación.
+fotos:
+  - 01.jpg
+  - 02.jpg
+  - 03.jpg
+  - 04.jpg
+  - 05.jpg
+  - 06.jpg
+  - 07.jpg
+  - 08.jpg
+  - 09.jpg
+  - 10.jpg
+  - 11.jpg
+  - 12.jpg
+  - 13.jpg
+  - 14.jpg
+  - 15.jpg
+  - 16.jpg
+  - 17.jpg
+  - 18.jpg
+  - 19.jpg
+  - 20.jpg
+  - 21.jpg
+agente: jonathan-fox
+url_convecta: ""
+lat: null
+lng: null

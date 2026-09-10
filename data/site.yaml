@@ -1,0 +1,52 @@
+# Configuracion global del sitio
+nombre: "Maestría Inmobiliaria"
+lema: "Asesoría experta al alcance de tu mano"
+url: "https://www.maestriainmobiliaria.cl"
+descripcion: >-
+  Corretaje de propiedades en Concepción y el Gran Concepción. Vendemos tu casa
+  o departamento en menos de 90 días con un método probado de captación,
+  evaluación comercial y marketing profesional.
+
+contacto:
+  email: "ContactoMaestriaInmobiliaria@gmail.com"
+  telefono: "+56 9 3420 5639"        # ventas
+  telefono_captacion: "+56 9 5768 7081"  # captacion / propietarios
+  whatsapp: "56934205639"            # ventas: float global, pie, contacto y fichas de propiedad
+  whatsapp_captacion: "56957687081"  # captacion: pagina "Vende con nosotros"
+  direccion: ""           # (opcional)
+  horario: "Lunes a Sábado de 09:00 a 20:00 hrs"
+  ciudad: "Concepción, Región del Biobío, Chile"
+
+# Imágenes del encabezado de la portada. Rotan al azar en cada visita.
+# Archivos en assets/img/hero/  ·  medida recomendada: 2400 x 1350 px (16:9), JPG.
+hero_imagenes:
+  - /img/hero/a1.jpg   # fachada casa moderna
+  - /img/hero/a2.jpg   # interior living luminoso
+  - /img/hero/c2.jpg   # cocina moderna
+
+redes:
+  instagram: ""
+  facebook: ""
+  youtube: "https://www.youtube.com/watch?v=UA5u1aVKWNc"
+  linkedin: ""
+  tiktok: ""
+
+# Zonas donde opera (se muestran en el pie y en SEO)
+zonas:
+  - "Concepción"
+  - "San Pedro de la Paz"
+  - "Talcahuano"
+  - "Hualpén"
+  - "Chiguayante"
+  - "Penco"
+
+nav:
+  - { label: "Inicio", url: "/" }
+  - { label: "Propiedades", url: "/propiedades/" }
+  - { label: "Vende con nosotros", url: "/vende-con-nosotros/" }
+  - { label: "Nosotros", url: "/nosotros/" }
+  - { label: "Blog", url: "/blog/" }
+  - { label: "Contacto", url: "/contacto/" }
+
+# El formulario de contacto usa Formspree (o similar). Pega aqui el endpoint.
+formspree_endpoint: ""    # ej: https://formspree.io/f/xxxxxxxx

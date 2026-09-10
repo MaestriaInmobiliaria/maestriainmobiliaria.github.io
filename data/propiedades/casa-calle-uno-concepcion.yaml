@@ -1,0 +1,69 @@
+codigo: "9081"
+titulo: "Casa en venta en Concepción"
+operacion: venta
+tipo: casa
+estado: disponible
+destacada: false
+precio: 1761
+moneda: UF
+comuna: "Concepción"
+ciudad: "Concepción"
+sector: "Concepción"
+dormitorios: 3
+banos: 1
+estacionamientos: 2
+superficie_util: 106
+superficie_terreno: 88
+caracteristicas:
+  - "Casa pareada de 2 pisos"
+  - "Garaje techado, 2 estacionamientos"
+  - "Patio"
+  - "Orientación oriente"
+  - "Comedor diario, conexión para lavadora"
+  - "Acceso a internet y teléfono"
+  - "Ampliaciones no regularizadas (potencial de valorización)"
+descripcion: |
+  **Tu nuevo hogar en Concepción te está esperando.**
+
+  Imagina vivir en una casa cómoda, funcional y con excelente conectividad, donde
+  cada espacio ha sido pensado para disfrutar en familia. Esta propiedad
+  representa una excelente oportunidad para quienes buscan una vivienda amplia,
+  con estacionamientos, patio y gran potencial de valorización.
+
+  **Características:** casa pareada de dos pisos, orientación este, 3 dormitorios,
+  1 baño, living y comedor, comedor diario, conexión para lavadora, patio, garaje
+  techado y 2 estacionamientos. Admite mascotas. Acceso a internet y teléfono.
+
+  **Living y comedor:** espacios acogedores y funcionales, ideales para compartir
+  en familia.
+
+  **Cocina y comedor diario:** la cocina cuenta con una distribución que facilita
+  las tareas del hogar, complementada con un cómodo comedor diario.
+
+  **Dormitorios:** tres dormitorios que se adaptan a distintas necesidades —
+  familia, oficina en casa o habitación de invitados.
+
+  **Exterior y entorno:** patio y garaje techado, más un sector con juegos
+  infantiles, locomoción cercana y excelente conectividad.
+
+  **Importante:** la propiedad presenta ampliaciones en el primer y segundo piso
+  que actualmente no se encuentran regularizadas, y requiere una pequeña
+  inversión en remodelación. Esto representa una oportunidad para personalizarla
+  y aumentar su valor.
+fotos:
+  - 01.jpg
+  - 02.jpg
+  - 03.jpg
+  - 04.jpg
+  - 05.jpg
+  - 06.jpg
+  - 07.jpg
+  - 08.jpg
+  - 09.jpg
+  - 10.jpg
+  - 11.jpg
+  - 12.jpg
+agente: jonathan-fox
+url_convecta: ""
+lat: null
+lng: null

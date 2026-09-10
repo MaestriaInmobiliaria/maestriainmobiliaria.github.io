@@ -1,0 +1,31 @@
+# Equipo de agentes. slug = identificador para enlazar propiedades.
+agentes:
+  - slug: jonathan-fox
+    nombre: "Jonathan Fox"
+    cargo: "Director & Corredor de Propiedades"
+    email: "ContactoMaestriaInmobiliaria@gmail.com"
+    telefono: ""
+    whatsapp: ""
+    foto: "/img/equipo/jonathan-fox.jpg"
+    bio: >-
+      Fundador de Maestría Inmobiliaria y creador del Método V.I.E Advanced para
+      vender propiedades en menos de 90 días. Más de una década asesorando a
+      propietarios del Gran Concepción.
+
+  - slug: nicolas-herrera
+    nombre: "Nicolás Herrera"
+    cargo: "Agente Captador"
+    email: "ContactoMaestriaInmobiliaria@gmail.com"
+    telefono: ""
+    whatsapp: ""
+    foto: "/img/equipo/nicolas-herrera.jpg"
+    bio: "Especialista en captación y evaluación comercial de casas y departamentos."
+
+  - slug: camila-cardenas
+    nombre: "Camila Cárdenas"
+    cargo: "Agente Captadora"
+    email: "ContactoMaestriaInmobiliaria@gmail.com"
+    telefono: ""
+    whatsapp: ""
+    foto: "/img/equipo/camila-cardenas.jpg"
+    bio: "Acompaña a los propietarios en todo el proceso de venta, del avalúo a la escritura."

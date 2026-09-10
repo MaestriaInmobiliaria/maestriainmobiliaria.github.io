@@ -1,0 +1,76 @@
+codigo: "9198"
+titulo: "Casa en Valle San Pedro"
+operacion: venta
+tipo: casa
+estado: disponible
+destacada: false
+precio: 1663
+moneda: UF
+comuna: "San Pedro de la Paz"
+ciudad: "Concepción"
+sector: "Valle San Pedro"
+dormitorios: 2
+banos: 1
+estacionamientos: 2
+superficie_util: 93
+superficie_terreno: 78
+caracteristicas:
+  - "Casa de 2 pisos"
+  - "2 estacionamientos privados"
+  - "Patio privado"
+  - "Orientación norte"
+  - "A pasos de la Estación Costa Mar (Biotrén) e INACAP"
+  - "Pisos de cerámico"
+descripcion: |
+  **¡Amplitud, comodidad y excelente ubicación en Valle San Pedro!**
+
+  Vive en uno de los sectores residenciales más cotizados de San Pedro de la Paz:
+  a pasos de la Estación Costa Mar (Biotrén) y de INACAP, cercana a supermercados,
+  colegios y jardines infantiles, áreas verdes y plazas, comercio y servicios
+  esenciales, con rápida conexión hacia Concepción y Coronel.
+
+  Esta acogedora casa ubicada en Valle San Pedro ofrece comodidad, excelente
+  conectividad y espacios bien aprovechados, siendo una alternativa ideal para
+  familias o personas que buscan un lugar seguro y tranquilo, con excelente
+  plusvalía.
+
+  **Living y comedor:** cómodo espacio integrado pensado para compartir en
+  familia. Los pisos de cerámico entregan elegancia, fácil limpieza y una
+  excelente presentación.
+
+  **Cocina:** cocina independiente, amplia, cómoda y funcional, con una
+  distribución que aprovecha al máximo cada metro cuadrado.
+
+  **Dormitorios:** 2 dormitorios ubicados en el segundo piso, garantizando máxima
+  privacidad. Espacios amplios con excelente entrada de luz natural.
+
+  **Baño:** 1 baño completo y totalmente funcional.
+
+  **Estacionamiento:** capacidad para 2 vehículos dentro de la propiedad.
+
+  **Patio:** patio privado, ideal para asados familiares, actividades al aire
+  libre, espacio para mascotas o futuros proyectos de personalización.
+
+  Entorno residencial consolidado, tranquilo y seguro, con excelente plusvalía.
+fotos:
+  - 01.jpg
+  - 02.jpg
+  - 03.jpg
+  - 04.jpg
+  - 05.jpg
+  - 06.jpg
+  - 07.jpg
+  - 08.jpg
+  - 09.jpg
+  - 10.jpg
+  - 11.jpg
+  - 12.jpg
+  - 13.jpg
+  - 14.jpg
+  - 15.jpg
+  - 16.jpg
+  - 17.jpg
+agente: jonathan-fox
+url_convecta: ""
+lat: null
+lng: null

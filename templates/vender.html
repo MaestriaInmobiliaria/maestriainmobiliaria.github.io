@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% block title %}Vende con nosotros — {{ site.nombre }}{% endblock %}
+{% block description %}Publica y vende tu casa o departamento en Concepción con un método probado: evaluación comercial, marketing profesional y acompañamiento hasta la escritura.{% endblock %}
+{% block canonical %}/vende-con-nosotros/{% endblock %}
+
+{% block content %}
+<section class="page-hero">
+  <div class="wrap">
+    <p class="eyebrow eyebrow-light">Para propietarios</p>
+    <h1>Vende con nosotros</h1>
+    <p class="page-hero-lead">Un solo interlocutor, un proceso claro y un objetivo: vender tu propiedad al mejor precio posible, en el menor tiempo posible.</p>
+    {% set wa_capta = site.contacto.whatsapp_captacion or site.contacto.whatsapp %}
+    <a class="btn btn-gold" href="https://wa.me/{{ wa_capta }}?text=Hola,%20quiero%20vender%20mi%20propiedad%20y%20me%20gustar%C3%ADa%20agendar%20una%20conversaci%C3%B3n." target="_blank" rel="noopener">Agendar una conversación</a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Cómo trabajamos</p>
+      <h2>El proceso, paso a paso</h2>
+    </div>
+    <ol class="pasos">
+      <li>
+        <span class="pasos-num">1</span>
+        <h3>Reunión y visita</h3>
+        <p>Conocemos la propiedad y tus objetivos. Levantamos toda la información técnica y legal.</p>
+      </li>
+      <li>
+        <span class="pasos-num">2</span>
+        <h3>Evaluación comercial</h3>
+        <p>Estudio de mercado con comparables reales de la zona para fijar un precio competitivo y defendible.</p>
+      </li>
+      <li>
+        <span class="pasos-num">3</span>
+        <h3>Preparación y marketing</h3>
+        <p>Fotografía profesional, ficha comercial, video y publicación en los principales portales y redes.</p>
+      </li>
+      <li>
+        <span class="pasos-num">4</span>
+        <h3>Visitas y negociación</h3>
+        <p>Filtramos interesados, coordinamos visitas y negociamos en tu representación.</p>
+      </li>
+      <li>
+        <span class="pasos-num">5</span>
+        <h3>Cierre y escritura</h3>
+        <p>Estudio de títulos, promesa, gestión bancaria y firma. Te acompañamos hasta la entrega de llaves.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="section section-dark">
+  <div class="wrap">
+    <div class="grid-2">
+      <div>
+        <p class="eyebrow eyebrow-light">Nuestro compromiso</p>
+        <h2>Trabajamos con Acuerdo de Servicios</h2>
+        <p>Todo queda por escrito: honorarios, plazos y lo que hacemos por ti. Sin letra chica y sin sorpresas.</p>
+        <ul class="check">
+          <li>Reporte periódico del avance</li>
+          <li>Fotografía y difusión profesional incluidas</li>
+          <li>Asesoría legal en el estudio de títulos</li>
+          <li>Un agente responsable de principio a fin</li>
+        </ul>
+      </div>
+      <div class="cta-card">
+        <h3>¿Empezamos?</h3>
+        <p>Cuéntanos de tu propiedad y coordinamos una visita sin costo.</p>
+        {% set wa_capta = site.contacto.whatsapp_captacion or site.contacto.whatsapp %}
+        <a class="btn btn-gold btn-block" href="https://wa.me/{{ wa_capta }}?text=Hola,%20quiero%20vender%20mi%20propiedad%20y%20coordinar%20una%20visita." target="_blank" rel="noopener">Quiero vender mi propiedad</a>
+        <a class="btn btn-outline btn-block" href="/contacto/">Prefiero escribir un formulario</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

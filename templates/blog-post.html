@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}{{ post.titulo }} — {{ site.nombre }}{% endblock %}
+{% block description %}{{ post.resumen or post.titulo }}{% endblock %}
+{% block canonical %}{{ post.url }}{% endblock %}
+
+{% block content %}
+<article class="section">
+  <div class="wrap prose-wrap">
+    <nav class="crumbs"><a href="/blog/">&larr; Volver al blog</a></nav>
+    {% if post.fecha %}<p class="blog-fecha">{{ post.fecha }}</p>{% endif %}
+    <h1>{{ post.titulo }}</h1>
+    {% if post.imagen %}<img class="prose-hero" src="{{ post.imagen }}" alt="{{ post.titulo }}">{% endif %}
+    <div class="prose">{{ post.html | safe }}</div>
+  </div>
+</article>
+
+<section class="section">
+  <div class="wrap cta-band">
+    <div><h2>¿Tienes una propiedad para vender?</h2><p>Te ayudamos a hacerlo bien.</p></div>
+    <a class="btn btn-gold" href="/contacto/">Contactar</a>
+  </div>
+</section>
+{% endblock %}

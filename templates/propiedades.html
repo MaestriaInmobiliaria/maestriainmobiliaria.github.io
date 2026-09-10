@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% import "_macros.html" as ui %}
+{% block title %}Propiedades en venta y arriendo — {{ site.nombre }}{% endblock %}
+{% block description %}Casas y departamentos en venta y arriendo en Concepción, San Pedro de la Paz, Talcahuano, Hualpén y alrededores.{% endblock %}
+{% block canonical %}/propiedades/{% endblock %}
+
+{% block content %}
+<section class="page-hero page-hero-sm">
+  <div class="wrap">
+    <p class="eyebrow eyebrow-light">Inventario</p>
+    <h1>Propiedades disponibles</h1>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <form class="filtros" id="filtros">
+      <label>
+        <span>Operación</span>
+        <select name="operacion">
+          <option value="">Todas</option>
+          <option value="venta">Venta</option>
+          <option value="arriendo">Arriendo</option>
+        </select>
+      </label>
+      <label>
+        <span>Tipo</span>
+        <select name="tipo">
+          <option value="">Todos</option>
+          {% for t in tipos %}<option value="{{ t }}">{{ tipo_label.get(t, t) }}</option>{% endfor %}
+        </select>
+      </label>
+      <label>
+        <span>Comuna</span>
+        <select name="comuna">
+          <option value="">Todas</option>
+          {% for c in comunas %}<option value="{{ c }}">{{ c }}</option>{% endfor %}
+        </select>
+      </label>
+      <label>
+        <span>Dormitorios (mín.)</span>
+        <select name="dormitorios">
+          <option value="">Cualquiera</option>
+          <option value="1">1+</option><option value="2">2+</option>
+          <option value="3">3+</option><option value="4">4+</option>
+        </select>
+      </label>
+      <button type="reset" class="btn btn-outline btn-sm">Limpiar</button>
+    </form>
+
+    <p class="resultados" id="resultados">{{ propiedades | length }} propiedades</p>
+
+    <div class="grid-props" id="listaProps">
+      {% for p in propiedades %}
+      <div class="prop-item"
+           data-operacion="{{ p.operacion }}"
+           data-tipo="{{ p.tipo }}"
+           data-comuna="{{ p.comuna }}"
+           data-dormitorios="{{ p.dormitorios or 0 }}">
+        {{ ui.tarjeta(p) }}
+      </div>
+      {% endfor %}
+    </div>
+    <p class="empty" id="sinResultados" hidden>No hay propiedades con esos filtros. Prueba ampliando la búsqueda.</p>
+  </div>
+</section>
+{% endblock %}
