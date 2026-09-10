@@ -10,6 +10,7 @@ from __future__ import annotations
 import argparse
 import datetime as dt
 import http.server
+import os
 import shutil
 import socketserver
 from pathlib import Path
@@ -198,7 +199,10 @@ def _write_extra(site: dict, props: list[dict]) -> None:
     (DIST / "sitemap.xml").write_text("\n".join(sm), encoding="utf-8")
     (DIST / "robots.txt").write_text(
         f"User-agent: *\nAllow: /\nSitemap: {base}/sitemap.xml\n", encoding="utf-8")
-    (DIST / "CNAME").write_text("www.maestriainmobiliaria.cl\n", encoding="utf-8")
+    # CNAME solo cuando ya se decidio el dominio (site.yaml: deploy_cname) o via env.
+    cname = os.environ.get("SITE_CNAME") or site.get("deploy_cname") or ""
+    if cname.strip():
+        (DIST / "CNAME").write_text(cname.strip() + "\n", encoding="utf-8")
     # 404
     try:
         env = Environment(loader=FileSystemLoader(str(TEMPLATES)), autoescape=True,

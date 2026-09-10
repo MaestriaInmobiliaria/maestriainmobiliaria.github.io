@@ -50,3 +50,7 @@ nav:
 
 # El formulario de contacto usa Formspree (o similar). Pega aqui el endpoint.
 formspree_endpoint: ""    # ej: https://formspree.io/f/xxxxxxxx
+
+# Dominio propio para GitHub Pages. Dejar vacio hasta reapuntar el DNS en GoDaddy.
+# Cuando este listo: deploy_cname: "www.maestriainmobiliaria.cl"
+deploy_cname: ""
