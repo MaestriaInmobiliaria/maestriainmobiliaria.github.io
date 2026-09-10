@@ -107,6 +107,9 @@ p { margin: 0 0 1rem; }
 .btn-gold:hover { background: var(--dorado-claro); border-color: var(--dorado-claro); }
 .btn-outline { background: transparent; color: var(--verde); border-color: var(--verde); }
 .btn-outline:hover { background: var(--verde); color: var(--marfil); }
+.btn-verde { background: var(--verde); color: var(--marfil); border-color: var(--verde); }
+.btn-verde:hover { background: var(--verde-800); border-color: var(--verde-800); color: var(--blanco); }
+.btn-verde svg { width: 1.15em; height: 1.15em; }
 .btn-ghost { background: transparent; color: var(--marfil); border-color: rgba(245,239,227,.5); }
 .btn-ghost:hover { background: rgba(245,239,227,.12); border-color: var(--marfil); }
 .section-dark .btn-outline { color: var(--marfil); border-color: rgba(245,239,227,.5); }
