@@ -2,8 +2,8 @@ codigo: "9157"
 titulo: "Departamento en Condominio Aires de Chiguayante"
 operacion: venta
 tipo: departamento
-estado: disponible
-destacada: false
+estado: vendida
+destacada: true
 precio: 1907
 moneda: UF
 comuna: "Chiguayante"

@@ -2,7 +2,7 @@ codigo: "9004"
 titulo: "Departamento en Edificio Parque Lomas, Lomas San Sebastián"
 operacion: venta
 tipo: departamento
-estado: disponible
+estado: vendida
 destacada: true
 precio: 3490
 moneda: UF

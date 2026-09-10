@@ -3,7 +3,7 @@ titulo: "Departamento cerca de la UdeC — Edmundo Larenas"
 operacion: venta
 tipo: departamento
 estado: disponible
-destacada: false
+destacada: true
 precio: 2750
 moneda: UF
 comuna: "Concepción"

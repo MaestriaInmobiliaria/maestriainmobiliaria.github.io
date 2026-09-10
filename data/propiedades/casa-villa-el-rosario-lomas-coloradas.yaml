@@ -3,7 +3,7 @@ titulo: "Casa en Villa El Rosario II, Lomas Coloradas"
 operacion: venta
 tipo: casa
 estado: disponible
-destacada: true
+destacada: false
 precio: 3130
 moneda: UF
 comuna: "San Pedro de la Paz"

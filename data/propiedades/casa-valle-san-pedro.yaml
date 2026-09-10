@@ -3,7 +3,7 @@ titulo: "Casa en Valle San Pedro"
 operacion: venta
 tipo: casa
 estado: disponible
-destacada: false
+destacada: true
 precio: 1663
 moneda: UF
 comuna: "San Pedro de la Paz"

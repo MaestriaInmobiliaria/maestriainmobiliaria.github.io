@@ -4,7 +4,7 @@
     <img src="{{ p.portada }}" alt="{{ p.titulo }}" loading="lazy" width="600" height="400">
     <span class="card-prop-op">{{ p.operacion_label }}</span>
     {% if p.estado == 'reservada' %}<span class="card-prop-estado">Reservada</span>{% endif %}
-    {% if p.estado == 'vendida' %}<span class="card-prop-estado">Vendida</span>{% endif %}
+    {% if p.estado == 'vendida' %}<span class="ribbon-vendido">Vendido</span>{% endif %}
   </a>
   <div class="card-prop-body">
     <p class="card-prop-tipo">{{ p.tipo_label }}{% if p.sector %} &middot; {{ p.sector }}{% endif %}</p>

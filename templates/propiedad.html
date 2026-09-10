@@ -40,7 +40,8 @@
       </button>
       <span class="prop-contador" id="fotoContador">1 / {{ p.fotos | length }}</span>
       {% endif %}
-      {% if p.estado != 'disponible' %}<figcaption class="prop-badge">{{ p.estado | capitalize }}</figcaption>{% endif %}
+      {% if p.estado == 'vendida' %}<span class="ribbon-vendido ribbon-vendido-lg">Vendido</span>{% endif %}
+      {% if p.estado == 'reservada' %}<figcaption class="prop-badge">Reservada</figcaption>{% endif %}
     </figure>
     {% if p.fotos | length > 1 %}
     <div class="prop-thumbs">

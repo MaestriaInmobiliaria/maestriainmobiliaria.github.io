@@ -156,7 +156,9 @@ def build() -> None:
 
     comunas = sorted({p["comuna"] for p in props if p.get("comuna")})
     tipos = sorted({p["tipo"] for p in props if p.get("tipo")})
-    destacadas = [p for p in props if p.get("destacada") and p.get("estado") == "disponible"][:6]
+    # las destacadas del inicio incluyen vendidas (se muestran con franja "Vendido")
+    destacadas = [p for p in props if p.get("destacada")
+                  and p.get("estado") in ("disponible", "vendida", "reservada")][:6]
     disponibles = [p for p in props if p.get("estado") == "disponible"]
 
     def render(tpl: str, out: str, **ctx) -> None:
