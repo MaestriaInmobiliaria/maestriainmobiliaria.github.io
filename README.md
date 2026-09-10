@@ -57,6 +57,24 @@ Conectar el dominio propio (cuando se decida):
 2. En GoDaddy, crear el registro DNS que indica GitHub (CNAME `www` → `<usuario>.github.io`).
 3. Settings → Pages → Custom domain.
 
+## Zona de miembros (capacitación de agentes)
+
+Página `/zona-miembros/` con los módulos del programa. Cada módulo se desbloquea
+con una clave; la clave y el enlace real del contenido van **cifrados** (no en
+texto plano). Es un candado blando: frena al visitante casual, no es seguridad
+de nivel bancario.
+
+Para activar un módulo:
+
+1. Abre `tools/zona-encrypt.html` en el navegador (doble clic).
+2. Escribe la clave que darás a los agentes y el enlace real del módulo.
+3. Copia el `blob` que genera.
+4. Pégalo en `data/zona_miembros.yaml`, en el campo `blob` de ese módulo.
+5. `git commit` + `git push`.
+
+`blob` vacío = el módulo se muestra como "Próximamente".
+(Alternativa por consola: `python tools/zona_encrypt.py "clave" "https://enlace"`.)
+
 ## Pendientes de configuración
 
 - `data/site.yaml`: redes sociales, `formspree_endpoint`.

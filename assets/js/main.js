@@ -156,4 +156,142 @@
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
   }
+
+  // --- zona de miembros: desbloqueo de módulos por clave ---
+  var zmGrid = document.getElementById("zmGrid");
+  if (zmGrid && window.crypto && window.crypto.subtle) {
+    (function () {
+      var enc = new TextEncoder();
+      var dec = new TextDecoder();
+
+      function b64d(s) {
+        var bin = atob(s), out = new Uint8Array(bin.length);
+        for (var i = 0; i < bin.length; i++) out[i] = bin.charCodeAt(i);
+        return out;
+      }
+      function cat() {
+        var total = 0, i;
+        for (i = 0; i < arguments.length; i++) total += arguments[i].length;
+        var out = new Uint8Array(total), o = 0;
+        for (i = 0; i < arguments.length; i++) { out.set(arguments[i], o); o += arguments[i].length; }
+        return out;
+      }
+      function eq(a, b) {
+        if (a.length !== b.length) return false;
+        var d = 0;
+        for (var i = 0; i < a.length; i++) d |= a[i] ^ b[i];
+        return d === 0;
+      }
+      function sha256(bytes) {
+        return crypto.subtle.digest("SHA-256", bytes).then(function (b) { return new Uint8Array(b); });
+      }
+      function pbkdf2(pw, salt, iters) {
+        return crypto.subtle.importKey("raw", enc.encode(pw), "PBKDF2", false, ["deriveBits"])
+          .then(function (km) {
+            return crypto.subtle.deriveBits(
+              { name: "PBKDF2", salt: salt, iterations: iters, hash: "SHA-256" }, km, 256);
+          }).then(function (b) { return new Uint8Array(b); });
+      }
+      function hmac(key, msg) {
+        return crypto.subtle.importKey("raw", key, { name: "HMAC", hash: "SHA-256" }, false, ["sign"])
+          .then(function (k) { return crypto.subtle.sign("HMAC", k, msg); })
+          .then(function (b) { return new Uint8Array(b); });
+      }
+      function keystream(key, len) {
+        var out = new Uint8Array(0), ctr = 0;
+        function next() {
+          if (out.length >= len) return Promise.resolve(out.slice(0, len));
+          var c = new Uint8Array(4);
+          new DataView(c.buffer).setUint32(0, ctr++, false);
+          return sha256(cat(key, c)).then(function (blk) { out = cat(out, blk); return next(); });
+        }
+        return next();
+      }
+      // blob = base64( salt[16] | iters[4 BE] | tag[16] | ciphertext )   pt = "M1|" + url
+      function descifrar(pw, blobB64) {
+        var blob = b64d(blobB64);
+        var salt = blob.slice(0, 16);
+        var iters = new DataView(blob.buffer, blob.byteOffset).getUint32(16, false);
+        var tag = blob.slice(20, 36);
+        var ct = blob.slice(36);
+        return pbkdf2(pw, salt, iters).then(function (key) {
+          return hmac(key, ct).then(function (t) {
+            if (!eq(tag, t.slice(0, 16))) throw new Error("clave");
+            return keystream(key, ct.length).then(function (ks) {
+              var pt = new Uint8Array(ct.length);
+              for (var i = 0; i < ct.length; i++) pt[i] = ct[i] ^ ks[i];
+              var txt = dec.decode(pt);
+              if (txt.indexOf("M1|") !== 0) throw new Error("clave");
+              return txt.slice(3);
+            });
+          });
+        });
+      }
+
+      var cards = Array.prototype.slice.call(zmGrid.querySelectorAll(".zm-card"));
+      var prog = document.getElementById("zmProgreso");
+
+      function actualizarProgreso() {
+        var conClave = cards.filter(function (c) { return c.dataset.blob; });
+        var abiertos = conClave.filter(function (c) { return c.dataset.estado === "abierto"; });
+        if (prog && conClave.length) {
+          prog.hidden = false;
+          prog.textContent = "Tu avance: " + abiertos.length + " de " + conClave.length + " módulos";
+        }
+      }
+      function setEstado(card, estado, url) {
+        card.dataset.estado = estado;
+        card.classList.toggle("is-abierto", estado === "abierto");
+        card.classList.toggle("is-pronto", estado === "pronto");
+        var link = card.querySelector(".zm-link");
+        if (url && link) link.href = url;
+        actualizarProgreso();
+      }
+
+      cards.forEach(function (card) {
+        var id = card.dataset.id;
+        var blob = card.dataset.blob;
+        var form = card.querySelector(".zm-unlock");
+        var err = card.querySelector(".zm-error");
+        var lockBtn = card.querySelector(".zm-lock-again");
+        var lsKey = "zm_" + id;
+
+        if (!blob) { setEstado(card, "pronto"); return; }
+
+        var guardado = null;
+        try { guardado = localStorage.getItem(lsKey); } catch (e) {}
+        if (guardado && /^https?:\/\//.test(guardado)) {
+          setEstado(card, "abierto", guardado);
+        } else {
+          setEstado(card, "bloqueado");
+        }
+
+        if (form) {
+          form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            if (err) err.hidden = true;
+            var btn = form.querySelector("button");
+            var pw = form.clave.value.trim();
+            if (!pw) return;
+            btn.disabled = true;
+            descifrar(pw, blob).then(function (url) {
+              try { localStorage.setItem(lsKey, url); } catch (e2) {}
+              setEstado(card, "abierto", url);
+            }).catch(function () {
+              if (err) err.hidden = false;
+            }).then(function () { btn.disabled = false; });
+          });
+        }
+        if (lockBtn) {
+          lockBtn.addEventListener("click", function () {
+            try { localStorage.removeItem(lsKey); } catch (e) {}
+            if (form) form.reset();
+            setEstado(card, "bloqueado");
+          });
+        }
+      });
+
+      actualizarProgreso();
+    })();
+  }
 })();

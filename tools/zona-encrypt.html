@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Generar clave de módulo — Zona de miembros</title>
+<style>
+  body{font-family:Montserrat,system-ui,sans-serif;max-width:640px;margin:40px auto;padding:0 20px;color:#1c1b18;background:#fbfaf6}
+  h1{font-size:1.2rem;color:#022F2A}
+  p{color:#555;font-size:.9rem;line-height:1.6}
+  label{display:block;font-weight:600;font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;margin:18px 0 6px}
+  input{width:100%;padding:10px 12px;border:1px solid #d8d2c4;border-radius:4px;font:inherit}
+  button{margin-top:20px;background:#022F2A;color:#f5efe3;border:0;border-radius:4px;padding:12px 22px;font:inherit;font-weight:600;cursor:pointer}
+  .out{margin-top:20px;background:#fff;border:1px solid #d8d2c4;border-radius:4px;padding:14px;font-family:ui-monospace,Menlo,monospace;font-size:.8rem;word-break:break-all;white-space:pre-wrap;display:none}
+  .copy{background:#c6a15b;color:#022F2A;margin-left:8px}
+</style>
+</head>
+<body>
+<h1>Generar el <code>blob</code> de un módulo</h1>
+<p>
+  Escribe la <strong>clave</strong> que le darás a los agentes para ese módulo y el
+  <strong>enlace real</strong> del contenido (Gamma, Hotmart, Drive, lo que sea).
+  Se genera una línea cifrada que pegas en <code>data/zona_miembros.yaml</code>, en el
+  campo <code>blob</code> del módulo. Ni la clave ni el enlace quedan legibles en el sitio.
+</p>
+
+<label for="clave">Clave del módulo</label>
+<input id="clave" type="text" autocomplete="off" spellcheck="false" placeholder="ej. prospeccion-mision-3-fox">
+
+<label for="url">Enlace real del módulo</label>
+<input id="url" type="url" autocomplete="off" spellcheck="false" placeholder="https://...">
+
+<button id="gen">Generar</button>
+
+<div class="out" id="out"></div>
+
+<script>
+const enc = new TextEncoder();
+function cat(){let t=0;for(const a of arguments)t+=a.length;const o=new Uint8Array(t);let p=0;for(const a of arguments){o.set(a,p);p+=a.length;}return o;}
+function b64e(b){let s="";for(const x of b)s+=String.fromCharCode(x);return btoa(s);}
+async function sha256(b){return new Uint8Array(await crypto.subtle.digest("SHA-256",b));}
+async function pbkdf2(pw,salt,it){
+  const km=await crypto.subtle.importKey("raw",enc.encode(pw),"PBKDF2",false,["deriveBits"]);
+  const bits=await crypto.subtle.deriveBits({name:"PBKDF2",salt,iterations:it,hash:"SHA-256"},km,256);
+  return new Uint8Array(bits);
+}
+async function hmac(key,msg){
+  const k=await crypto.subtle.importKey("raw",key,{name:"HMAC",hash:"SHA-256"},false,["sign"]);
+  return new Uint8Array(await crypto.subtle.sign("HMAC",k,msg));
+}
+async function keystream(key,len){
+  let out=new Uint8Array(0),ctr=0;
+  while(out.length<len){
+    const c=new Uint8Array(4);new DataView(c.buffer).setUint32(0,ctr++,false);
+    out=cat(out,await sha256(cat(key,c)));
+  }
+  return out.slice(0,len);
+}
+async function generar(){
+  const clave=document.getElementById("clave").value.trim();
+  const url=document.getElementById("url").value.trim();
+  const out=document.getElementById("out");
+  if(!clave || !/^https?:\/\//.test(url)){ out.style.display="block"; out.textContent="Falta la clave o el enlace no empieza con http(s)://"; return; }
+  const ITERS=200000;
+  const salt=crypto.getRandomValues(new Uint8Array(16));
+  const key=await pbkdf2(clave,salt,ITERS);
+  const pt=enc.encode("M1|"+url);
+  const ks=await keystream(key,pt.length);
+  const ct=pt.map((b,i)=>b^ks[i]);
+  const tag=(await hmac(key,ct)).slice(0,16);
+  const it=new Uint8Array(4);new DataView(it.buffer).setUint32(0,ITERS,false);
+  const blob=cat(salt,it,tag,ct);
+  const b64=b64e(blob);
+  out.style.display="block";
+  out.innerHTML='<strong>blob:</strong> "'+b64+'" <button class="copy" id="cp">Copiar</button>';
+  document.getElementById("cp").onclick=()=>navigator.clipboard.writeText('"'+b64+'"');
+}
+document.getElementById("gen").onclick=generar;
+</script>
+</body>
+</html>

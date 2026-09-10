@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block title %}Zona de miembros — {{ site.nombre }}{% endblock %}
+{% block description %}Área de capacitación para el equipo de {{ site.nombre }}.{% endblock %}
+{% block canonical %}/zona-miembros/{% endblock %}
+{% block head %}<meta name="robots" content="noindex, nofollow">{% endblock %}
+
+{% block content %}
+<section class="page-hero page-hero-sm">
+  <div class="wrap">
+    <p class="eyebrow eyebrow-light">Equipo Maestría</p>
+    <h1>Zona de miembros</h1>
+    {% if zona.intro %}<p class="page-hero-lead">{{ zona.intro }}</p>{% endif %}
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="zm-head">
+      <p class="zm-progreso" id="zmProgreso" hidden></p>
+      {% if zona.nota_seguridad %}<p class="zm-nota">{{ zona.nota_seguridad }}</p>{% endif %}
+    </div>
+
+    <ol class="zm-grid" id="zmGrid">
+      {% for m in zona.modulos %}
+      <li class="zm-card" data-id="{{ m.id }}" data-blob="{{ m.blob }}">
+        <span class="zm-orden">{{ m.orden }}</span>
+        <div class="zm-body">
+          <h3>{{ m.nombre }}</h3>
+          <p class="zm-resumen">{{ m.resumen }}</p>
+
+          <div class="zm-pronto">Próximamente</div>
+
+          <form class="zm-unlock" autocomplete="off">
+            <label for="zm-pw-{{ m.id }}">Ingresa la clave del módulo</label>
+            <div class="zm-unlock-row">
+              <input type="password" id="zm-pw-{{ m.id }}" name="clave" required autocomplete="off" spellcheck="false">
+              <button type="submit" class="btn btn-verde btn-sm">Desbloquear</button>
+            </div>
+            <p class="zm-error" hidden>Clave incorrecta. Revisa mayúsculas y espacios.</p>
+          </form>
+
+          <div class="zm-abierto">
+            <span class="zm-ok">✓ Módulo desbloqueado</span>
+            <a class="btn btn-gold btn-sm zm-link" href="#" target="_blank" rel="noopener">Entrar al módulo</a>
+            <button type="button" class="zm-lock-again">Bloquear en este equipo</button>
+          </div>
+        </div>
+      </li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>
+{% endblock %}

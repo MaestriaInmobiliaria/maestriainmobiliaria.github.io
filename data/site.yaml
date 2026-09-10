@@ -47,6 +47,7 @@ nav:
   - { label: "Nosotros", url: "/nosotros/" }
   - { label: "Blog", url: "/blog/" }
   - { label: "Contacto", url: "/contacto/" }
+  - { label: "Miembros", url: "/zona-miembros/" }
 
 # El formulario de contacto usa Formspree (o similar). Pega aqui el endpoint.
 formspree_endpoint: ""    # ej: https://formspree.io/f/xxxxxxxx

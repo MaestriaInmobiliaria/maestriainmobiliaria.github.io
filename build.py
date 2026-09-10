@@ -188,6 +188,10 @@ def build() -> None:
     render("vender.html", "vende-con-nosotros/index.html", page="vender")
     render("nosotros.html", "nosotros/index.html", page="nosotros")
     render("contacto.html", "contacto/index.html", page="contacto")
+    zona = load_yaml(DATA / "zona_miembros.yaml")
+    if zona.get("activa"):
+        zona["modulos"] = sorted(zona.get("modulos", []), key=lambda m: m.get("orden", 99))
+        render("zona-miembros.html", "zona-miembros/index.html", zona=zona, page="zona-miembros")
     render("blog.html", "blog/index.html", posts=posts, page="blog")
     for post in posts:
         render("blog-post.html", f"blog/{post['slug']}/index.html", post=post, page="blog")

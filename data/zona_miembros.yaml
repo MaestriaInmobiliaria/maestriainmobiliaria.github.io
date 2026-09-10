@@ -1,0 +1,58 @@
+# Zona de miembros — capacitación para agentes de Maestría Inmobiliaria.
+#
+# Cada módulo se desbloquea con una clave. La clave y el enlace real del módulo
+# NO se guardan en texto plano: se cifran con `tools/zona-encrypt.html`
+# (o `python tools/zona_encrypt.py`) y el resultado (una línea larga en base64)
+# se pega en el campo `blob` del módulo.
+#
+# blob vacío  ->  el módulo aparece como "Próximamente" (sin candado).
+
+activa: true
+
+intro: >-
+  Área exclusiva para el equipo de Maestría Inmobiliaria. El programa avanza por
+  misiones: cada módulo se abre con la clave que recibes al completar el anterior.
+
+nota_seguridad: >-
+  Esta clave es personal del equipo. No la compartas fuera de Maestría Inmobiliaria.
+
+modulos:
+  - id: prospeccion
+    orden: 1
+    nombre: "Prospección"
+    resumen: >-
+      Búsqueda y pre-captación de propietarios: portales, guion de WhatsApp,
+      guion de llamada telefónica, propuesta de valor y CRM.
+    blob: ""
+
+  - id: presentacion
+    orden: 2
+    nombre: "Presentación"
+    resumen: >-
+      El propósito de la presentación es crear deseo, no dar información.
+      Estructura de la reunión y VSL.
+    blob: ""
+
+  - id: evaluacion
+    orden: 3
+    nombre: "Evaluación Comercial"
+    resumen: >-
+      ACM real: mapa de comparables, método Chorñik, techo y piso, semáforo de
+      precios y recomendación comercial.
+    blob: ""
+
+  - id: cierre
+    orden: 4
+    nombre: "Cierre"
+    resumen: >-
+      Manejo de objeciones, cierre de doble alternativa y firma del Acuerdo de
+      Servicios.
+    blob: ""
+
+  - id: captacion
+    orden: 5
+    nombre: "Captación"
+    resumen: >-
+      Del Acuerdo firmado a la publicación: fotos, copy, Convecta, Kommo y
+      gestión de precio.
+    blob: ""

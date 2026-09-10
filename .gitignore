@@ -3,3 +3,6 @@ __pycache__/
 *.pyc
 .DS_Store
 .venv/
+# notas privadas de la zona de miembros (claves/enlaces en texto plano)
+data/_zona_*.yaml
+data/_zona_*.txt
