@@ -1,7 +1,7 @@
 {% macro tarjeta(p) %}
 <article class="card-prop{% if p.estado != 'disponible' %} is-{{ p.estado }}{% endif %}">
   <a class="card-prop-media" href="{{ p.url }}">
-    <img src="{{ p.portada }}" alt="{{ p.titulo }}" loading="lazy" width="600" height="400">
+    <img src="{{ p.portada }}" alt="{{ p.titulo }}" loading="lazy" width="600" height="450">
     <span class="card-prop-op">{{ p.operacion_label }}</span>
     {% if p.estado == 'reservada' %}<span class="card-prop-estado">Reservada</span>{% endif %}
     {% if p.estado == 'vendida' %}<span class="ribbon-vendido">Vendido</span>{% endif %}
