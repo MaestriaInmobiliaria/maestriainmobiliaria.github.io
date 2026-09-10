@@ -290,10 +290,14 @@ p { margin: 0 0 1rem; }
 
 .pasos { list-style: none; counter-reset: p; margin: 0; padding: 0; display: grid; gap: 1.6rem; }
 .pasos li {
-  display: grid; grid-template-columns: 56px 1fr; gap: 1.2rem;
+  display: grid; grid-template-columns: 56px 1fr;
+  column-gap: 1.2rem; row-gap: .2rem;
   align-items: start; padding-bottom: 1.6rem;
   border-bottom: 1px solid var(--gris-borde);
 }
+.pasos li > .pasos-num { grid-column: 1; grid-row: 1 / span 2; }
+.pasos li > h3,
+.pasos li > p { grid-column: 2; }
 .pasos li:last-child { border-bottom: 0; }
 .pasos-num {
   width: 56px; height: 56px; border-radius: 50%;
