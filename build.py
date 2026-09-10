@@ -148,10 +148,19 @@ def build() -> None:
         trim_blocks=True,
         lstrip_blocks=True,
     )
+    # version para romper cache de css/js en cada cambio
+    import hashlib
+    _assets = b""
+    for _f in ((DIST / "css" / "styles.css"), (DIST / "js" / "main.js")):
+        if _f.exists():
+            _assets += _f.read_bytes()
+    asset_v = hashlib.md5(_assets).hexdigest()[:10] if _assets else "1"
+
     env.globals.update(
         site=site,
         agentes=list(agentes.values()),
         anio=dt.date.today().year,
+        asset_v=asset_v,
     )
 
     comunas = sorted({p["comuna"] for p in props if p.get("comuna")})
@@ -184,11 +193,11 @@ def build() -> None:
         render("blog-post.html", f"blog/{post['slug']}/index.html", post=post, page="blog")
 
     # archivos sueltos
-    _write_extra(site, props)
+    _write_extra(site, props, asset_v)
     print(f"OK  {len(props)} propiedades  |  {len(posts)} posts  ->  {DIST}")
 
 
-def _write_extra(site: dict, props: list[dict]) -> None:
+def _write_extra(site: dict, props: list[dict], asset_v: str = "1") -> None:
     base = site.get("url", "https://www.maestriainmobiliaria.cl").rstrip("/")
     urls = ["/", "/propiedades/", "/vende-con-nosotros/", "/nosotros/", "/contacto/", "/blog/"]
     urls += [p["url"] for p in props]
@@ -209,7 +218,7 @@ def _write_extra(site: dict, props: list[dict]) -> None:
     try:
         env = Environment(loader=FileSystemLoader(str(TEMPLATES)), autoescape=True,
                           trim_blocks=True, lstrip_blocks=True)
-        env.globals.update(site=site, anio=dt.date.today().year)
+        env.globals.update(site=site, anio=dt.date.today().year, asset_v=asset_v)
         (DIST / "404.html").write_text(env.get_template("404.html").render(page=""), encoding="utf-8")
     except Exception:
         pass
