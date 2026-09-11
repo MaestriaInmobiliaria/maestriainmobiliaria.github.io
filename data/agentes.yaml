@@ -12,6 +12,15 @@ agentes:
       vender propiedades en menos de 90 días. Más de una década asesorando a
       propietarios del Gran Concepción.
 
+  - slug: camila-cardenas
+    nombre: "Camila Cárdenas"
+    cargo: "Agente Captadora"
+    email: "ContactoMaestriaInmobiliaria@gmail.com"
+    telefono: ""
+    whatsapp: ""
+    foto: "/img/equipo/camila-cardenas.jpg"
+    bio: "Acompaña a los propietarios en todo el proceso de venta, del avalúo a la escritura."
+
   - slug: nicolas-herrera
     nombre: "Nicolás Herrera"
     cargo: "Agente Captador"
@@ -21,11 +30,11 @@ agentes:
     foto: "/img/equipo/nicolas-herrera.jpg"
     bio: "Especialista en captación y evaluación comercial de casas y departamentos."
 
-  - slug: camila-cardenas
-    nombre: "Camila Cárdenas"
-    cargo: "Agente Captadora"
+  - slug: luciano-alarcon
+    nombre: "Luciano Alarcón"
+    cargo: "Abogado"
     email: "ContactoMaestriaInmobiliaria@gmail.com"
     telefono: ""
     whatsapp: ""
-    foto: "/img/equipo/camila-cardenas.jpg"
-    bio: "Acompaña a los propietarios en todo el proceso de venta, del avalúo a la escritura."
+    foto: "/img/equipo/luciano-alarcon.jpg"
+    bio: "Asesoría legal de Maestría Inmobiliaria: estudio de títulos, acuerdos de servicio y acompañamiento hasta la escritura."

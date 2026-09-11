@@ -47,8 +47,9 @@ def main():
             card(1200, 800, slug.replace("-", " ").title(),
                  ROOT / "data" / "propiedades" / "_fotos" / slug / f"{i:02d}.jpg")
     for slug, nom in (("jonathan-fox", "Jonathan Fox"),
+                      ("camila-cardenas", "Camila Cárdenas"),
                       ("nicolas-herrera", "Nicolás Herrera"),
-                      ("camila-cardenas", "Camila Cárdenas")):
+                      ("luciano-alarcon", "Luciano Alarcón")):
         card(600, 700, nom, a / "equipo" / f"{slug}.jpg", "Foto pendiente")
     print("placeholders OK")
 
