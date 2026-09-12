@@ -188,6 +188,12 @@ def build() -> None:
     render("vender.html", "vende-con-nosotros/index.html", page="vender")
     render("nosotros.html", "nosotros/index.html", page="nosotros")
     render("contacto.html", "contacto/index.html", page="contacto")
+
+    # landing personal de marca (no va en el nav principal)
+    jonathan_props = [p for p in disponibles
+                       if p.get("agente_obj") and p["agente_obj"].get("slug") == "jonathan-fox"][:3]
+    render("jonathanfox.html", "jonathanfox/index.html",
+           jonathan=agentes.get("jonathan-fox"), propiedades=jonathan_props, page="jonathanfox")
     zona = load_yaml(DATA / "zona_miembros.yaml")
     if zona.get("activa"):
         zona["modulos"] = sorted(zona.get("modulos", []), key=lambda m: m.get("orden", 99))
@@ -203,7 +209,7 @@ def build() -> None:
 
 def _write_extra(site: dict, props: list[dict], asset_v: str = "1") -> None:
     base = site.get("url", "https://www.maestriainmobiliaria.cl").rstrip("/")
-    urls = ["/", "/propiedades/", "/vende-con-nosotros/", "/nosotros/", "/contacto/", "/blog/"]
+    urls = ["/", "/propiedades/", "/vende-con-nosotros/", "/nosotros/", "/contacto/", "/blog/", "/jonathanfox/"]
     urls += [p["url"] for p in props]
     today = dt.date.today().isoformat()
     sm = ['<?xml version="1.0" encoding="UTF-8"?>',
