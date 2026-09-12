@@ -34,6 +34,7 @@
       </span>
     </a>
 
+    {% if not nav_simple %}
     <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
       <span></span><span></span><span></span>
     </button>
@@ -44,6 +45,7 @@
       {% endfor %}
       <a class="nav-cta" href="/vende-con-nosotros/">Quiero vender</a>
     </nav>
+    {% endif %}
   </div>
 </header>
 

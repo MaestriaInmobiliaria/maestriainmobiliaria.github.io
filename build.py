@@ -199,7 +199,7 @@ def build() -> None:
         props_agente = [p for p in disponibles
                          if p.get("agente_obj") and p["agente_obj"].get("slug") == agente["slug"]][:3]
         render("agente-landing.html", f"{landing['url']}/index.html",
-               agente=agente, propiedades=props_agente, page=landing["url"])
+               agente=agente, propiedades=props_agente, page=landing["url"], nav_simple=True)
     zona = load_yaml(DATA / "zona_miembros.yaml")
     if zona.get("activa"):
         zona["modulos"] = sorted(zona.get("modulos", []), key=lambda m: m.get("orden", 99))
