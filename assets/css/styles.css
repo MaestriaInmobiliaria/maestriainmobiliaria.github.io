@@ -608,14 +608,13 @@ p { margin: 0 0 1rem; }
 
 /* ---------- landing personal por agente (Jonathan, Camila, Nicolás...) ---------- */
 .lp-hero .grid-2 { align-items: center; }
-.lp-photo { position: relative; }
-.lp-photo::after {
-  content: ""; position: absolute; top: 18px; right: -18px; bottom: -18px; left: 18px;
-  border: 2px solid var(--dorado); border-radius: var(--radius); z-index: 0;
+.lp-photo {
+  padding: 14px; border: 2px solid var(--dorado);
+  border-radius: var(--radius); box-shadow: var(--sombra);
 }
 .lp-photo img {
-  position: relative; z-index: 1; width: 100%; aspect-ratio: 4 / 5;
-  object-fit: cover; border-radius: var(--radius); box-shadow: var(--sombra);
+  display: block; width: 100%; aspect-ratio: 4 / 5;
+  object-fit: cover; border-radius: 2px;
 }
 .lp-stats {
   display: flex; flex-wrap: wrap; gap: 1.8rem 2.4rem;
