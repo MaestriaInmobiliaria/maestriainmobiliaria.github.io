@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+{% import "_macros.html" as ui %}
+{% set L = agente.landing %}
+{% block title %}{{ agente.nombre }} — {{ agente.cargo }} en Concepción{% endblock %}
+{% block description %}{{ agente.nombre }}, {{ agente.cargo }} en Maestría Inmobiliaria. Vende tu casa o departamento en el Gran Concepción con el Método V.I.E. Advanced.{% endblock %}
+{% block canonical %}/{{ L.url }}/{% endblock %}
+{% block ogimage %}{{ agente.foto }}{% endblock %}
+
+{% block content %}
+{% set wa = site.contacto.whatsapp_captacion or site.contacto.whatsapp %}
+<section class="page-hero lp-hero">
+  <div class="wrap grid-2">
+    <div>
+      <p class="eyebrow eyebrow-light">{{ L.eyebrow }}</p>
+      <h1>{{ agente.nombre }}</h1>
+      <p class="page-hero-lead">{{ L.lead }}</p>
+      <div class="hero-actions">
+        <a class="btn btn-gold" href="https://wa.me/{{ wa }}?text={{ L.wa_text_hero | urlencode }}" target="_blank" rel="noopener">Hablar con {{ agente.nombre.split(' ')[0] }} por WhatsApp</a>
+        <a class="btn btn-ghost" href="/propiedades/">Ver propiedades</a>
+      </div>
+      {% if L.stats %}
+      <div class="lp-stats">
+        {% for s in L.stats %}
+        <div class="lp-stat"><strong>{{ s.valor }}</strong><span>{{ s.label }}</span></div>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+    <div class="lp-photo">
+      <img src="{{ agente.foto }}" alt="{{ agente.nombre }}" width="480" height="600" loading="eager">
+    </div>
+  </div>
+</section>
+
+{% if L.pilares %}
+<section class="section section-dark">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow eyebrow-light">Por qué trabajar conmigo</p>
+      <h2>Un proceso de venta con método, no con suerte</h2>
+    </div>
+    <div class="grid-3 pilares">
+      {% for p in L.pilares %}
+      <div class="pilar">
+        <span class="pilar-num">{{ "%02d" | format(loop.index) }}</span>
+        <h3>{{ p.titulo }}</h3>
+        <p>{{ p.texto }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<section class="section">
+  <div class="wrap grid-2">
+    <div>
+      <h2>Sobre mí</h2>
+      {% for parrafo in L.sobre_mi %}<p>{{ parrafo }}</p>{% endfor %}
+    </div>
+    {% if L.checklist %}
+    <div>
+      <h2>Lo que hago por ti</h2>
+      <ul class="check">
+        {% for item in L.checklist %}<li>{{ item }}</li>{% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+  </div>
+</section>
+
+{% if propiedades %}
+<section class="section section-soft">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Mi inventario</p>
+      <h2>Propiedades que estoy vendiendo hoy</h2>
+    </div>
+    <div class="grid-props">
+      {% for p in propiedades %}{{ ui.tarjeta(p) }}{% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<section class="section">
+  <div class="wrap cta-band">
+    <div>
+      <h2>¿Quieres vender tu propiedad conmigo?</h2>
+      <p>Conversemos sin costo ni compromiso.</p>
+    </div>
+    <a class="btn btn-gold" href="https://wa.me/{{ wa }}?text={{ L.wa_text_cta | urlencode }}" target="_blank" rel="noopener">Agenda tu llamada gratuita</a>
+  </div>
+</section>
+{% endblock %}

@@ -606,23 +606,23 @@ p { margin: 0 0 1rem; }
   * { transition: none !important; scroll-behavior: auto !important; }
 }
 
-/* ---------- landing personal (Jonathan Fox) ---------- */
-.jf-hero .grid-2 { align-items: center; }
-.jf-photo { position: relative; }
-.jf-photo::after {
+/* ---------- landing personal por agente (Jonathan, Camila, Nicolás...) ---------- */
+.lp-hero .grid-2 { align-items: center; }
+.lp-photo { position: relative; }
+.lp-photo::after {
   content: ""; position: absolute; top: 18px; right: -18px; bottom: -18px; left: 18px;
   border: 2px solid var(--dorado); border-radius: var(--radius); z-index: 0;
 }
-.jf-photo img {
+.lp-photo img {
   position: relative; z-index: 1; width: 100%; aspect-ratio: 4 / 5;
   object-fit: cover; border-radius: var(--radius); box-shadow: var(--sombra);
 }
-.jf-stats {
+.lp-stats {
   display: flex; flex-wrap: wrap; gap: 1.8rem 2.4rem;
   margin-top: 2.2rem; padding-top: 1.8rem; border-top: 1px solid rgba(245,239,227,.2);
 }
-.jf-stat strong { display: block; font-family: var(--serif); font-size: 1.8rem; color: var(--dorado-claro); line-height: 1; }
-.jf-stat span { font-size: .76rem; letter-spacing: .04em; color: rgba(245,239,227,.75); }
+.lp-stat strong { display: block; font-family: var(--serif); font-size: 1.8rem; color: var(--dorado-claro); line-height: 1; }
+.lp-stat span { font-size: .76rem; letter-spacing: .04em; color: rgba(245,239,227,.75); }
 @media (max-width: 900px) {
-  .jf-photo { max-width: 360px; margin: 2.4rem auto 0; }
+  .lp-photo { max-width: 360px; margin: 2.4rem auto 0; }
 }

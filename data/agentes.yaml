@@ -11,6 +11,39 @@ agentes:
       Estratega inmobiliario y fundador de Maestría Inmobiliaria, creador del
       Método V.I.E. Advanced para posicionar y vender propiedades en menos de
       90 días, con más de 5 años de experiencia en el Gran Concepción.
+    # Landing personal de marca -> /jonathanfox/
+    landing:
+      url: "jonathanfox"
+      eyebrow: "Corredor de Propiedades · Concepción"
+      lead: >-
+        Director y fundador de Maestría Inmobiliaria. Ayudo a propietarios del
+        Gran Concepción a vender su casa o departamento al mejor precio, en
+        menos de 90 días, con el Método V.I.E. Advanced que desarrollé para esto.
+      wa_text_hero: "Hola Jonathan, quiero conversar sobre la venta de mi propiedad."
+      wa_text_cta: "Hola Jonathan, quiero agendar una llamada de asesoría gratuita para vender mi propiedad."
+      stats:
+        - { valor: "+5", label: "Años de experiencia" }
+        - { valor: "90", label: "Días, método de venta" }
+        - { valor: "V.I.E.", label: "Método propio Advanced" }
+      pilares:
+        - titulo: "Método propio, no genérico"
+          texto: "El Método V.I.E. Advanced que yo mismo creé para posicionar y vender propiedades en menos de 90 días."
+        - titulo: "Evaluación con datos reales"
+          texto: "Defino el precio con estudio de mercado y comparables de la zona, no con una corazonada."
+        - titulo: "Contacto directo conmigo"
+          texto: "Yo coordino tu proceso de principio a fin: evaluación, marketing, visitas, negociación y escritura."
+      sobre_mi:
+        - >-
+          Estratega inmobiliario y fundador de Maestría Inmobiliaria, creador del
+          Método V.I.E. Advanced para posicionar y vender propiedades en menos de
+          90 días, con más de 5 años de experiencia en el Gran Concepción.
+        - "Trabajo con propietarios que quieren vender bien: al mejor precio posible, en un plazo razonable, y sin sorpresas en el camino."
+      checklist:
+        - "Evaluación comercial de tu propiedad, sin costo"
+        - "Estrategia de marketing y fotografía profesional"
+        - "Publicación en los principales portales inmobiliarios"
+        - "Negociación y acompañamiento hasta la escritura"
+        - "Un solo interlocutor durante todo el proceso: yo"
 
   - slug: camila-cardenas
     nombre: "Camila Cárdenas"
@@ -20,6 +53,37 @@ agentes:
     whatsapp: ""
     foto: "/img/equipo/camila-cardenas.jpg"
     bio: "Experta en detectar el potencial de cada propiedad y diseñar la estrategia adecuada para venderla, con visión comercial y respaldo profesional, siempre cercana al propietario."
+    # Landing personal de marca -> /camilacardenas/
+    landing:
+      url: "camilacardenas"
+      eyebrow: "Agente Captadora · Concepción"
+      lead: >-
+        Agente Captadora en Maestría Inmobiliaria. Ayudo a propietarios del
+        Gran Concepción a preparar y posicionar su casa o departamento para
+        venderlo al mejor precio, con el Método V.I.E. Advanced y un
+        acompañamiento cercano en cada etapa.
+      wa_text_hero: "Hola Camila, quiero conversar sobre la venta de mi propiedad."
+      wa_text_cta: "Hola Camila, quiero agendar una llamada de asesoría gratuita para vender mi propiedad."
+      stats:
+        - { valor: "90", label: "Días, método de venta" }
+        - { valor: "V.I.E.", label: "Método de Maestría Inmobiliaria" }
+        - { valor: "100%", label: "Acompañamiento personalizado" }
+      pilares:
+        - titulo: "Preparo tu propiedad para vender"
+          texto: "Reviso cada detalle y defino la estrategia de presentación que hace destacar tu propiedad."
+        - titulo: "Evaluación con datos reales"
+          texto: "Trabajo con estudio de mercado y comparables reales de tu zona para fijar el precio correcto."
+        - titulo: "Acompañamiento cercano"
+          texto: "Te acompaño desde la primera visita hasta la firma, siempre disponible para tus dudas."
+      sobre_mi:
+        - "Soy Agente Captadora en Maestría Inmobiliaria. Mi trabajo es detectar el potencial real de cada propiedad y diseñar la estrategia adecuada para venderla, combinando visión comercial y respaldo profesional."
+        - "Trabajo siempre cercana al propietario: te explico cada paso del proceso y te mantengo al tanto de los avances hasta el cierre."
+      checklist:
+        - "Evaluación comercial de tu propiedad, sin costo"
+        - "Estrategia de presentación y marketing"
+        - "Publicación en los principales portales inmobiliarios"
+        - "Coordinación de visitas y seguimiento"
+        - "Acompañamiento hasta la firma de la escritura"
 
   - slug: nicolas-herrera
     nombre: "Nicolás Herrera"
@@ -29,6 +93,36 @@ agentes:
     whatsapp: ""
     foto: "/img/equipo/nicolas-herrera.jpg"
     bio: "Experto en captación y evaluación comercial de propiedades, combinando conocimiento de mercado y estrategia para posicionar cada inmueble hacia una venta efectiva."
+    # Landing personal de marca -> /nicolasherrera/
+    landing:
+      url: "nicolasherrera"
+      eyebrow: "Agente Captador · Concepción"
+      lead: >-
+        Agente Captador en Maestría Inmobiliaria. Combino conocimiento de
+        mercado y estrategia para evaluar y posicionar tu propiedad hacia una
+        venta efectiva, con el Método V.I.E. Advanced.
+      wa_text_hero: "Hola Nicolás, quiero conversar sobre la venta de mi propiedad."
+      wa_text_cta: "Hola Nicolás, quiero agendar una llamada de asesoría gratuita para vender mi propiedad."
+      stats:
+        - { valor: "90", label: "Días, método de venta" }
+        - { valor: "V.I.E.", label: "Método de Maestría Inmobiliaria" }
+        - { valor: "100%", label: "Acompañamiento personalizado" }
+      pilares:
+        - titulo: "Evaluación comercial rigurosa"
+          texto: "Analizo el mercado y los comparables reales de tu zona para definir un precio justo y vendible."
+        - titulo: "Estrategia de posicionamiento"
+          texto: "Preparo tu propiedad y su presentación para captar el interés correcto desde el primer día."
+        - titulo: "Gestión hasta el cierre"
+          texto: "Coordino visitas, negociación y trámites hasta la firma de la escritura."
+      sobre_mi:
+        - "Soy Agente Captador en Maestría Inmobiliaria. Me especializo en captación y evaluación comercial de propiedades, combinando conocimiento de mercado y estrategia para posicionar cada inmueble hacia una venta efectiva."
+        - "Mi objetivo es que vendas al mejor precio posible, con un proceso claro y sin sorpresas."
+      checklist:
+        - "Evaluación comercial de tu propiedad, sin costo"
+        - "Estrategia de posicionamiento en el mercado"
+        - "Publicación en los principales portales inmobiliarios"
+        - "Negociación y seguimiento de visitas"
+        - "Acompañamiento hasta la firma de la escritura"
 
   - slug: luciano-alarcon
     nombre: "Luciano Alarcón"

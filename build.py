@@ -189,11 +189,17 @@ def build() -> None:
     render("nosotros.html", "nosotros/index.html", page="nosotros")
     render("contacto.html", "contacto/index.html", page="contacto")
 
-    # landing personal de marca (no va en el nav principal)
-    jonathan_props = [p for p in disponibles
-                       if p.get("agente_obj") and p["agente_obj"].get("slug") == "jonathan-fox"][:3]
-    render("jonathanfox.html", "jonathanfox/index.html",
-           jonathan=agentes.get("jonathan-fox"), propiedades=jonathan_props, page="jonathanfox")
+    # landings personales de marca por agente (no van en el nav principal)
+    landing_urls = []
+    for agente in agentes.values():
+        landing = agente.get("landing")
+        if not landing or not landing.get("url"):
+            continue
+        landing_urls.append(landing["url"])
+        props_agente = [p for p in disponibles
+                         if p.get("agente_obj") and p["agente_obj"].get("slug") == agente["slug"]][:3]
+        render("agente-landing.html", f"{landing['url']}/index.html",
+               agente=agente, propiedades=props_agente, page=landing["url"])
     zona = load_yaml(DATA / "zona_miembros.yaml")
     if zona.get("activa"):
         zona["modulos"] = sorted(zona.get("modulos", []), key=lambda m: m.get("orden", 99))
@@ -203,13 +209,14 @@ def build() -> None:
         render("blog-post.html", f"blog/{post['slug']}/index.html", post=post, page="blog")
 
     # archivos sueltos
-    _write_extra(site, props, asset_v)
-    print(f"OK  {len(props)} propiedades  |  {len(posts)} posts  ->  {DIST}")
+    _write_extra(site, props, asset_v, landing_urls)
+    print(f"OK  {len(props)} propiedades  |  {len(posts)} posts  |  {len(landing_urls)} landings  ->  {DIST}")
 
 
-def _write_extra(site: dict, props: list[dict], asset_v: str = "1") -> None:
+def _write_extra(site: dict, props: list[dict], asset_v: str = "1", landing_urls: list[str] | None = None) -> None:
     base = site.get("url", "https://www.maestriainmobiliaria.cl").rstrip("/")
-    urls = ["/", "/propiedades/", "/vende-con-nosotros/", "/nosotros/", "/contacto/", "/blog/", "/jonathanfox/"]
+    urls = ["/", "/propiedades/", "/vende-con-nosotros/", "/nosotros/", "/contacto/", "/blog/"]
+    urls += [f"/{u}/" for u in (landing_urls or [])]
     urls += [p["url"] for p in props]
     today = dt.date.today().isoformat()
     sm = ['<?xml version="1.0" encoding="UTF-8"?>',
