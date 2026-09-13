@@ -1,0 +1,97 @@
+codigo: "9444"
+titulo: "Departamento en Lomas San Sebastián, Concepción"
+operacion: venta
+tipo: departamento
+estado: disponible
+destacada: false
+precio: 3600
+moneda: UF
+comuna: "Concepción"
+ciudad: "Concepción"
+sector: "Lomas San Sebastián"
+dormitorios: 3
+banos: 2
+estacionamientos: 1
+superficie_util: 73
+superficie_terreno: 0
+caracteristicas:
+  - "A pasos del Colegio Almondale y a minutos del Mall Trébol"
+  - "Living y comedor con piso flotante"
+  - "Cocina independiente con calefont y gas de cañería (red)"
+  - "3 dormitorios con piso flotante"
+  - "Dormitorio principal con baño en suite y walk-in closet"
+  - "2 baños con terminaciones en cerámico"
+  - "Loggia de 2 m² aproximados"
+  - "1 estacionamiento (N°35) de uso y goce exclusivo"
+  - "No cuenta con bodega"
+  - "Condominio cerrado con áreas verdes, ascensor y seguridad 24/7 con cámaras"
+  - "Internet y línea telefónica ya instalados"
+  - "Admite mascotas"
+  - "Apto para operaciones con crédito hipotecario"
+descripcion: |
+  Imagina despertar cada mañana con vista despejada hacia el oriente, en un
+  departamento de 75 m² totales ubicado en Lomas San Sebastián, uno de los
+  sectores más consolidados de Concepción. Este departamento de 3 dormitorios
+  y 2 baños está pensado para quienes buscan comodidad, seguridad y un entorno
+  tranquilo para vivir en familia.
+
+  **Living y comedor:** cuentan con piso flotante, aportando calidez al día a
+  día. El departamento cuenta con un comedor principal, ideal para compartir
+  en familia.
+
+  **Cocina:** independiente, con calefont para agua caliente y conexión a gas
+  de cañería (red), lo que garantiza suministro estable. El piso es cerámico,
+  de fácil mantención.
+
+  **Dormitorios:** los 3 dormitorios tienen piso flotante. El dormitorio
+  principal cuenta con baño en suite y walk-in closet, entregando privacidad y
+  espacio de guardado adicional.
+
+  **Baños:** los 2 baños tienen terminaciones en cerámico, con un diseño
+  funcional pensado para el uso diario.
+
+  **Loggia:** el departamento suma una loggia de 2 m² aproximados, un espacio
+  extra para tomar aire o darle un uso más flexible al hogar.
+
+  **Estacionamiento:** incluye 1 estacionamiento (N°35) de uso y goce
+  exclusivo. La unidad no cuenta con bodega.
+
+  **Condominio y entorno:** el edificio se ubica en un condominio cerrado con
+  áreas verdes, ascensor y seguridad 24/7 con cámaras de vigilancia, además de
+  acceso a internet y línea telefónica ya instalados. Admite mascotas y es
+  apto para operaciones con crédito hipotecario.
+
+  El mobiliario que aparece en las fotografías no forma parte de la venta; el
+  departamento se entrega sin amoblar. Agenda tu visita hoy y conoce en
+  persona este departamento en uno de los sectores más consolidados de
+  Concepción.
+fotos:
+  - 01.jpg
+  - 02.jpg
+  - 03.jpg
+  - 04.jpg
+  - 05.jpg
+  - 06.jpg
+  - 07.jpg
+  - 08.jpg
+  - 09.jpg
+  - 10.jpg
+  - 11.jpg
+  - 12.jpg
+  - 13.jpg
+  - 14.jpg
+  - 15.jpg
+  - 16.jpg
+  - 17.jpg
+  - 18.jpg
+  - 19.jpg
+  - 20.jpg
+  - 21.jpg
+  - 22.jpg
+  - 23.jpg
+  - 24.jpg
+  - 25.jpg
+agente: jonathan-fox
+url_convecta: ""
+lat: null
+lng: null
