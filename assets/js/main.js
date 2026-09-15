@@ -341,23 +341,26 @@
   // tilt 3D suave al mover el mouse (solo con puntero fino, sin animación reducida)
   var tienePunteroFino = window.matchMedia && window.matchMedia("(pointer: fine)").matches;
   if (tienePunteroFino && !sinMovimientoUI) {
-    var tiltEls = Array.prototype.slice.call(
-      document.querySelectorAll(".card-prop, .pilar, .lp-photo, .equipo .agente img, .prop-foto-main img")
-    );
-    tiltEls.forEach(function (el) {
-      el.classList.add("tilt-el");
-      el.addEventListener("mousemove", function (e) {
-        var r = el.getBoundingClientRect();
-        var px = (e.clientX - r.left) / r.width - 0.5;
-        var py = (e.clientY - r.top) / r.height - 0.5;
-        el.style.setProperty("--tiltX", (py * -7).toFixed(2) + "deg");
-        el.style.setProperty("--tiltY", (px * 7).toFixed(2) + "deg");
+    function activarTilt(selector, factor, perspectivaPx) {
+      Array.prototype.slice.call(document.querySelectorAll(selector)).forEach(function (el) {
+        el.classList.add("tilt-el");
+        el.style.setProperty("--tiltP", perspectivaPx + "px");
+        el.addEventListener("mousemove", function (e) {
+          var r = el.getBoundingClientRect();
+          var px = (e.clientX - r.left) / r.width - 0.5;
+          var py = (e.clientY - r.top) / r.height - 0.5;
+          el.style.setProperty("--tiltX", (py * -factor).toFixed(2) + "deg");
+          el.style.setProperty("--tiltY", (px * factor).toFixed(2) + "deg");
+        });
+        el.addEventListener("mouseleave", function () {
+          el.style.setProperty("--tiltX", "0deg");
+          el.style.setProperty("--tiltY", "0deg");
+        });
       });
-      el.addEventListener("mouseleave", function () {
-        el.style.setProperty("--tiltX", "0deg");
-        el.style.setProperty("--tiltY", "0deg");
-      });
-    });
+    }
+    // las tarjetas de propiedad llevan un tilt más marcado que el resto
+    activarTilt(".card-prop", 11, 650);
+    activarTilt(".pilar, .lp-photo, .equipo .agente img, .prop-foto-main img", 7, 900);
   }
 
   // reveal suave de secciones al entrar en pantalla

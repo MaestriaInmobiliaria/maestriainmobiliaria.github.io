@@ -227,16 +227,29 @@ p { margin: 0 0 1rem; }
   border-radius: var(--radius);
   overflow: hidden;
   display: flex; flex-direction: column;
-  transition: var(--transicion);
+  transition: transform .35s ease-out, box-shadow .35s ease-out, border-color .35s ease;
 }
 .card-prop:hover { transform: translateY(-4px); box-shadow: var(--sombra); }
 .card-prop.tilt-el:hover {
-  transform: perspective(900px) rotateX(var(--tiltX)) rotateY(var(--tiltY)) translateY(-6px);
-  box-shadow: var(--sombra);
+  transform: perspective(var(--tiltP)) rotateX(var(--tiltX)) rotateY(var(--tiltY)) translateY(-8px) scale(1.015);
+  border-color: rgba(198,161,91,.5);
+  box-shadow:
+    0 26px 55px -22px rgba(2,47,42,.4),
+    0 0 0 1px rgba(198,161,91,.28),
+    0 16px 46px -18px rgba(198,161,91,.28);
 }
 /* 4/3 = proporción real de las fotos y portadas de Convecta (no recortar la franja inferior) */
 .card-prop-media { position: relative; display: block; aspect-ratio: 4 / 3; background: var(--verde); overflow: hidden; }
-.card-prop-media img { width: 100%; height: 100%; object-fit: cover; }
+.card-prop-media img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
+.card-prop:hover .card-prop-media img { transform: scale(1.07); }
+/* destello tipo vidrio que recorre la foto al pasar el mouse */
+.card-prop-media::before {
+  content: ""; position: absolute; inset: 0; z-index: 2; pointer-events: none;
+  background: linear-gradient(115deg, transparent 42%, rgba(255,255,255,.32) 50%, transparent 58%);
+  transform: translateX(-130%);
+  transition: transform .85s ease;
+}
+.card-prop:hover .card-prop-media::before { transform: translateX(130%); }
 .card-prop-op {
   position: absolute; top: .8rem; left: .8rem;
   background: var(--verde); color: var(--marfil);
@@ -741,8 +754,8 @@ p { margin: 0 0 1rem; }
 
 /* tilt 3D suave en tarjetas, fotos y pilares al mover el mouse (JS agrega .tilt-el) */
 .tilt-el {
-  --tiltX: 0deg; --tiltY: 0deg;
-  transform: perspective(900px) rotateX(var(--tiltX)) rotateY(var(--tiltY));
+  --tiltX: 0deg; --tiltY: 0deg; --tiltP: 900px;
+  transform: perspective(var(--tiltP)) rotateX(var(--tiltX)) rotateY(var(--tiltY));
   transition: transform .3s ease-out;
   will-change: transform;
 }
@@ -761,4 +774,7 @@ p { margin: 0 0 1rem; }
   .float-shape, .spark { animation: none; display: none; }
   .tilt-el { transform: none !important; }
   .reveal { opacity: 1; transform: none; transition: none; }
+  .card-prop-media::before { display: none; }
+  .card-prop-media img { transition: none; }
+  .card-prop:hover .card-prop-media img { transform: none; }
 }
