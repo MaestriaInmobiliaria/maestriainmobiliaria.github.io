@@ -294,4 +294,86 @@
       actualizarProgreso();
     })();
   }
+
+  // --- efectos visuales "IA": formas 3D flotantes, destellos, tilt, reveal ---
+  var sinMovimientoUI = window.matchMedia &&
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var esPantallaChica = window.matchMedia && window.matchMedia("(max-width: 640px)").matches;
+
+  // formas 3D flotantes + destellos, inyectadas en hero / page-hero
+  if (!sinMovimientoUI && !esPantallaChica) {
+    var contenedoresGlow = Array.prototype.slice.call(document.querySelectorAll(".hero, .page-hero"));
+    var formas = [
+      { cls: "float-shape-ring", size: 132, top: "10%", left: "5%", dur: "21s" },
+      { cls: "float-shape-orb", size: 44, top: "70%", left: "90%", dur: "15s" },
+      { cls: "float-shape-diamond", size: 30, top: "18%", left: "93%", dur: "18s" }
+    ];
+    var chispas = [
+      { top: "22%", left: "14%" }, { top: "34%", left: "80%" }, { top: "58%", left: "8%" },
+      { top: "66%", left: "70%" }, { top: "14%", left: "60%" }, { top: "80%", left: "40%" },
+      { top: "45%", left: "94%" }, { top: "12%", left: "30%" }
+    ];
+    contenedoresGlow.forEach(function (sec) {
+      formas.forEach(function (f, i) {
+        var span = document.createElement("span");
+        span.className = "float-shape " + f.cls;
+        span.style.width = f.size + "px";
+        span.style.height = f.size + "px";
+        span.style.top = f.top;
+        span.style.left = f.left;
+        span.style.setProperty("--dur", f.dur);
+        span.style.animationDelay = (i * -3.5) + "s";
+        span.setAttribute("aria-hidden", "true");
+        sec.appendChild(span);
+      });
+      chispas.forEach(function (c, i) {
+        var s = document.createElement("span");
+        s.className = "spark";
+        s.style.top = c.top;
+        s.style.left = c.left;
+        s.style.animationDelay = (i * -0.6) + "s";
+        s.setAttribute("aria-hidden", "true");
+        sec.appendChild(s);
+      });
+    });
+  }
+
+  // tilt 3D suave al mover el mouse (solo con puntero fino, sin animación reducida)
+  var tienePunteroFino = window.matchMedia && window.matchMedia("(pointer: fine)").matches;
+  if (tienePunteroFino && !sinMovimientoUI) {
+    var tiltEls = Array.prototype.slice.call(
+      document.querySelectorAll(".card-prop, .pilar, .lp-photo, .equipo .agente img, .prop-foto-main img")
+    );
+    tiltEls.forEach(function (el) {
+      el.classList.add("tilt-el");
+      el.addEventListener("mousemove", function (e) {
+        var r = el.getBoundingClientRect();
+        var px = (e.clientX - r.left) / r.width - 0.5;
+        var py = (e.clientY - r.top) / r.height - 0.5;
+        el.style.setProperty("--tiltX", (py * -7).toFixed(2) + "deg");
+        el.style.setProperty("--tiltY", (px * 7).toFixed(2) + "deg");
+      });
+      el.addEventListener("mouseleave", function () {
+        el.style.setProperty("--tiltX", "0deg");
+        el.style.setProperty("--tiltY", "0deg");
+      });
+    });
+  }
+
+  // reveal suave de secciones al entrar en pantalla
+  if (!sinMovimientoUI && "IntersectionObserver" in window) {
+    var revelables = Array.prototype.slice.call(
+      document.querySelectorAll(".section .section-head, .card-prop, .pilar, .agente")
+    );
+    revelables.forEach(function (el) { el.classList.add("reveal"); });
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: "0px 0px -40px 0px" });
+    revelables.forEach(function (el) { io.observe(el); });
+  }
 })();
