@@ -360,6 +360,28 @@
     });
   }
 
+  // spotlight que sigue el cursor dentro de las secciones oscuras
+  if (tienePunteroFino && !sinMovimientoUI) {
+    var spotSecciones = Array.prototype.slice.call(document.querySelectorAll(".hero, .page-hero, .section-dark"));
+    var spotTicking = false, spotEl = null, spotX = 50, spotY = 50;
+    function aplicarSpot() {
+      if (spotEl) {
+        spotEl.style.setProperty("--spot-x", spotX.toFixed(1) + "%");
+        spotEl.style.setProperty("--spot-y", spotY.toFixed(1) + "%");
+      }
+      spotTicking = false;
+    }
+    spotSecciones.forEach(function (sec) {
+      sec.addEventListener("mousemove", function (e) {
+        var r = sec.getBoundingClientRect();
+        spotEl = sec;
+        spotX = ((e.clientX - r.left) / r.width) * 100;
+        spotY = ((e.clientY - r.top) / r.height) * 100;
+        if (!spotTicking) { spotTicking = true; requestAnimationFrame(aplicarSpot); }
+      });
+    });
+  }
+
   // reveal suave de secciones al entrar en pantalla
   if (!sinMovimientoUI && "IntersectionObserver" in window) {
     var revelables = Array.prototype.slice.call(
