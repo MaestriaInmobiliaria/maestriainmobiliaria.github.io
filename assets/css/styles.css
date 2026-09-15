@@ -655,25 +655,11 @@ p { margin: 0 0 1rem; }
    Efectos "IA" — orbes de luz, destellos, formas 3D flotantes, tilt
    =================================================================== */
 
-/* textura de grilla de puntos, muy sutil, al fondo de secciones oscuras */
-.hero::before, .page-hero::before, .section-dark::before {
-  content: ""; position: absolute; inset: -15%;
-  z-index: 1; pointer-events: none; opacity: .5;
-  background-image: radial-gradient(rgba(245,239,227,.12) 1px, transparent 1.6px);
-  background-size: 28px 28px;
-  animation: gridDrift 44s linear infinite;
-}
-@keyframes gridDrift {
-  from { background-position: 0 0; }
-  to   { background-position: 168px 168px; }
-}
-
-/* orbes de luz ambientales + spotlight que sigue el cursor, detrás del contenido */
+/* orbes de luz ambientales, detrás del contenido */
 .hero::after, .page-hero::after, .section-dark::after {
   content: ""; position: absolute; inset: -15%;
   z-index: 1; pointer-events: none;
   background:
-    radial-gradient(240px 240px at var(--spot-x, 50%) var(--spot-y, 50%), rgba(227,197,139,.28), transparent 70%),
     radial-gradient(34rem 26rem at 10% 20%, rgba(198,161,91,.20), transparent 60%),
     radial-gradient(30rem 24rem at 90% 78%, rgba(16,104,91,.30), transparent 60%),
     radial-gradient(22rem 18rem at 78% 8%, rgba(227,197,139,.14), transparent 60%);
@@ -790,7 +776,6 @@ p { margin: 0 0 1rem; }
 }
 @media (prefers-reduced-motion: reduce) {
   .hero::after, .page-hero::after, .section-dark::after { animation: none; }
-  .hero::before, .page-hero::before, .section-dark::before { animation: none; }
   .hero-content h1, .page-hero h1 { animation: none; background-position: 0 0; }
   .hero-content h1::after, .page-hero h1::after { animation: none; opacity: 1; }
   .hero-content .eyebrow::after, .page-hero .eyebrow::after { animation: none; opacity: .7; }
