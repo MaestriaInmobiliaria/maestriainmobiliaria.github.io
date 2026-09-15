@@ -12,10 +12,11 @@
   <div class="wrap grid-2">
     <div>
       <p class="eyebrow eyebrow-light">{{ L.eyebrow }}</p>
-      <h1>{{ agente.nombre }}</h1>
+      <h1>{{ L.headline or agente.nombre }}</h1>
+      {% if L.headline %}<p class="lp-firma">Por <strong>{{ agente.nombre }}</strong> · {{ agente.cargo }}</p>{% endif %}
       <p class="page-hero-lead">{{ L.lead }}</p>
       <div class="hero-actions">
-        <a class="btn btn-gold" href="https://wa.me/{{ wa }}?text={{ L.wa_text_hero | urlencode }}" target="_blank" rel="noopener">Hablar con {{ agente.nombre.split(' ')[0] }} por WhatsApp</a>
+        <a class="btn btn-gold" href="https://wa.me/{{ wa }}?text={{ L.wa_text_hero | urlencode }}" target="_blank" rel="noopener">{{ L.cta_hero_boton or "Hablar con " ~ agente.nombre.split(' ')[0] ~ " por WhatsApp" }}</a>
         <a class="btn btn-ghost" href="/propiedades/">Ver propiedades</a>
       </div>
       {% if L.stats %}
@@ -32,12 +33,26 @@
   </div>
 </section>
 
+{% if L.video_youtube_id %}
+<section class="section section-video">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">{{ L.video_eyebrow or "Mira cómo trabajo" }}</p>
+      <h2>{{ L.video_titulo or "El proceso que uso para vender tu propiedad" }}</h2>
+    </div>
+    <div class="video-embed">
+      <iframe src="https://www.youtube.com/embed/{{ L.video_youtube_id }}" title="{{ agente.nombre }} — Maestría Inmobiliaria" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+{% endif %}
+
 {% if L.pilares %}
 <section class="section section-dark">
   <div class="wrap">
     <div class="section-head">
-      <p class="eyebrow eyebrow-light">Por qué trabajar conmigo</p>
-      <h2>Un proceso de venta con método, no con suerte</h2>
+      <p class="eyebrow eyebrow-light">{{ L.pilares_eyebrow or "Por qué trabajar conmigo" }}</p>
+      <h2>{{ L.pilares_titulo or "Un proceso de venta con método, no con suerte" }}</h2>
     </div>
     <div class="grid-3 pilares">
       {% for p in L.pilares %}
@@ -55,12 +70,12 @@
 <section class="section">
   <div class="wrap grid-2">
     <div>
-      <h2>Sobre mí</h2>
+      <h2>{{ L.sobre_mi_titulo or "Sobre mí" }}</h2>
       {% for parrafo in L.sobre_mi %}<p>{{ parrafo }}</p>{% endfor %}
     </div>
     {% if L.checklist %}
     <div>
-      <h2>Lo que hago por ti</h2>
+      <h2>{{ L.checklist_titulo or "Lo que hago por ti" }}</h2>
       <ul class="check">
         {% for item in L.checklist %}<li>{{ item }}</li>{% endfor %}
       </ul>
@@ -86,10 +101,10 @@
 <section class="section">
   <div class="wrap cta-band">
     <div>
-      <h2>¿Quieres vender tu propiedad conmigo?</h2>
-      <p>Conversemos sin costo ni compromiso.</p>
+      <h2>{{ L.cta_titulo or "¿Quieres vender tu propiedad conmigo?" }}</h2>
+      <p>{{ L.cta_texto or "Conversemos sin costo ni compromiso." }}</p>
     </div>
-    <a class="btn btn-gold" href="https://wa.me/{{ wa }}?text={{ L.wa_text_cta | urlencode }}" target="_blank" rel="noopener">Agenda tu llamada gratuita</a>
+    <a class="btn btn-gold" href="https://wa.me/{{ wa }}?text={{ L.wa_text_cta | urlencode }}" target="_blank" rel="noopener">{{ L.cta_boton or "Agenda tu llamada gratuita" }}</a>
   </div>
 </section>
 {% endblock %}
