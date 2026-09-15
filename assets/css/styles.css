@@ -672,14 +672,6 @@ p { margin: 0 0 1rem; }
   100% { transform: translate3d(-3%, 2%, 0) scale(1); }
 }
 
-/* cursor parpadeante estilo "IA escribiendo" al final del titular */
-.hero-content h1::after, .page-hero h1::after {
-  content: "|"; display: inline-block; margin-left: .1em;
-  color: var(--dorado-claro); -webkit-text-fill-color: var(--dorado-claro);
-  animation: cursorBlink 1.1s steps(1) infinite;
-}
-@keyframes cursorBlink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
-
 /* titulares con destello dorado en movimiento */
 @supports ((background-clip: text) or (-webkit-background-clip: text)) {
   .hero-content h1, .page-hero h1 {
@@ -765,7 +757,6 @@ p { margin: 0 0 1rem; }
 @media (prefers-reduced-motion: reduce) {
   .hero::after, .page-hero::after, .section-dark::after { animation: none; }
   .hero-content h1, .page-hero h1 { animation: none; background-position: 0 0; }
-  .hero-content h1::after, .page-hero h1::after { animation: none; opacity: 1; }
   .btn::after { animation: none; display: none; }
   .float-shape, .spark { animation: none; display: none; }
   .tilt-el { transform: none !important; }
