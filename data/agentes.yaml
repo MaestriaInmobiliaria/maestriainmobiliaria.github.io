@@ -14,40 +14,55 @@ agentes:
     # Landing personal de marca -> /jonathanfox/
     landing:
       url: "jonathanfox"
-      eyebrow: "Corredor de Propiedades · Concepción"
+      eyebrow: "Método V.I.E. Advanced · Concepción"
+      headline: >-
+        Vende tu casa o departamento en el Gran Concepción en menos de 90
+        días, al precio que realmente vale
       lead: >-
-        Director y fundador de Maestría Inmobiliaria. Ayudo a propietarios del
-        Gran Concepción a vender su casa o departamento al mejor precio, en
-        menos de 90 días, con el Método V.I.E. Advanced que desarrollé para esto.
-      wa_text_hero: "Hola Jonathan, quiero conversar sobre la venta de mi propiedad."
-      wa_text_cta: "Hola Jonathan, quiero agendar una llamada de asesoría gratuita para vender mi propiedad."
+        Si ya intentaste vender por tu cuenta, o con un corredor que dejó de
+        darte señales, sé lo que se siente: meses de espera, curiosos que
+        solo miran, y un precio que nadie termina de justificar. El Método
+        V.I.E. Advanced ordena ese proceso de principio a fin —evaluación con
+        datos reales, difusión profesional y un solo interlocutor— para que
+        vendas al mejor precio posible, sin sorpresas en el camino.
+      wa_text_hero: "Hola Jonathan, quiero mi evaluación comercial gratuita para vender mi propiedad."
+      wa_text_cta: "Hola Jonathan, quiero agendar mi evaluación comercial gratuita para vender mi propiedad."
+      cta_hero_boton: "Pide tu evaluación gratis por WhatsApp"
       stats:
-        - { valor: "+5", label: "Años de experiencia" }
-        - { valor: "90", label: "Días, método de venta" }
-        - { valor: "V.I.E.", label: "Método propio Advanced" }
+        - { valor: "90", label: "Días o menos, método de venta" }
+        - { valor: "+5", label: "Años de experiencia en el Gran Concepción" }
+        - { valor: "V.I.E.", label: "Método propio, no genérico" }
+      video_eyebrow: "Mira cómo trabajo"
+      video_titulo: "El proceso que uso para vender tu propiedad en menos de 90 días"
+      video_youtube_id: "UA5u1aVKWNc"
+      pilares_eyebrow: "Por qué este método funciona"
+      pilares_titulo: "Resuelve los 3 problemas que hacen fracasar una venta"
       pilares:
-        - titulo: "Método propio, no genérico"
-          texto: "El Método V.I.E. Advanced que yo mismo creé para posicionar y vender propiedades en menos de 90 días."
-        - titulo: "Evaluación con datos reales"
-          texto: "Defino el precio con estudio de mercado y comparables de la zona, no con una corazonada."
-        - titulo: "Contacto directo conmigo"
-          texto: "Yo coordino tu proceso de principio a fin: evaluación, marketing, visitas, negociación y escritura."
+        - titulo: "Precio real, no una corazonada"
+          texto: "Evalúo tu propiedad con datos de mercado y comparables reales de tu zona. Publicar con el precio correcto desde el día uno es la diferencia entre vender en 60 días o seguir pegado 8 meses."
+        - titulo: "Solo compradores reales en tu puerta"
+          texto: "Filtro y precalifico a cada interesado antes de coordinar una visita. No abres tu casa a curiosos: la muestras a quien realmente puede comprar."
+        - titulo: "Nunca más el silencio"
+          texto: "Un solo interlocutor durante todo el proceso: yo. Vas a saber siempre en qué va tu venta, sin tener que llamar tú a preguntar."
+      sobre_mi_titulo: "Quién está detrás del método"
       sobre_mi:
-        - >-
-          Estratega inmobiliario y fundador de Maestría Inmobiliaria, creador del
-          Método V.I.E. Advanced para posicionar y vender propiedades en menos de
-          90 días, con más de 5 años de experiencia en el Gran Concepción.
-        - "Trabajo con propietarios que quieren vender bien: al mejor precio posible, en un plazo razonable, y sin sorpresas en el camino."
+        - "Soy Jonathan Fox, fundador de Maestría Inmobiliaria y creador del Método V.I.E. Advanced, con más de 5 años vendiendo propiedades en el Gran Concepción."
+        - "No trabajo con exclusividad a ciegas ni con promesas genéricas: cada propiedad que tomo tiene una evaluación con datos reales, un plan de difusión concreto y reportes de avance, para que sepas siempre en qué va tu venta."
+      checklist_titulo: "Lo que hago por ti"
       checklist:
-        - "Evaluación comercial de tu propiedad, sin costo"
-        - "Estrategia de marketing y fotografía profesional"
-        - "Publicación en los principales portales inmobiliarios"
-        - "Negociación y acompañamiento hasta la escritura"
-        - "Un solo interlocutor durante todo el proceso: yo"
+        - "Evaluación comercial de tu propiedad, con datos reales de mercado y sin costo"
+        - "Filtro de compradores reales antes de agendar cualquier visita"
+        - "Fotografía profesional y publicación en los principales portales inmobiliarios"
+        - "Reportes periódicos: siempre vas a saber en qué va tu venta"
+        - "Gestión de documentos y trámites legales, incluidas ventas por herencia con varios herederos"
+        - "Negociación y acompañamiento hasta la firma de la escritura"
+      cta_titulo: "Pide tu evaluación comercial gratuita"
+      cta_texto: "Sin costo ni compromiso: sabrás cuánto vale realmente tu propiedad hoy."
+      cta_boton: "Quiero mi evaluación gratuita"
 
   - slug: camila-cardenas
     nombre: "Camila Cárdenas"
-    cargo: "Agente Captadora"
+    cargo: "Agente Inmobiliario"
     email: "ContactoMaestriaInmobiliaria@gmail.com"
     telefono: ""
     whatsapp: ""
@@ -87,7 +102,7 @@ agentes:
 
   - slug: nicolas-herrera
     nombre: "Nicolás Herrera"
-    cargo: "Agente Captador"
+    cargo: "Agente Inmobiliario"
     email: "ContactoMaestriaInmobiliaria@gmail.com"
     telefono: ""
     whatsapp: ""
