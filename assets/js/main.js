@@ -50,13 +50,23 @@
   if (fotoMain && thumbs.length) {
     var srcs = thumbs.map(function (t) { return t.dataset.src; });
     var contador = document.getElementById("fotoContador");
+    var fotoMainFig = document.querySelector(".prop-foto-main");
+    var sinMovGaleria = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     var idx = 0;
+
+    function reproducirGlintGaleria() {
+      if (sinMovGaleria || !fotoMainFig) return;
+      fotoMainFig.classList.remove("glint-play");
+      void fotoMainFig.offsetWidth; // fuerza reflow para poder reiniciar la animación
+      fotoMainFig.classList.add("glint-play");
+    }
 
     function mostrar(i) {
       idx = (i % srcs.length + srcs.length) % srcs.length;
       fotoMain.src = srcs[idx];
       thumbs.forEach(function (x, j) { x.classList.toggle("is-active", j === idx); });
       if (contador) contador.textContent = (idx + 1) + " / " + srcs.length;
+      reproducirGlintGaleria();
     }
 
     thumbs.forEach(function (t, i) {

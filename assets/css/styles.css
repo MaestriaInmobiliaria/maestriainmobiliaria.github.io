@@ -459,6 +459,13 @@ p { margin: 0 0 1rem; }
 }
 .prop-foto-main { position: relative; margin: 0; border-radius: var(--radius); overflow: hidden; }
 .prop-foto-main img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; }
+/* destello tipo vidrio al cambiar de foto en la galería */
+.prop-foto-main::before {
+  content: ""; position: absolute; inset: 0; z-index: 2; pointer-events: none;
+  background: linear-gradient(115deg, transparent 42%, rgba(255,255,255,.32) 50%, transparent 58%);
+  transform: translateX(-130%);
+}
+.prop-foto-main.glint-play::before { animation: cardGlint .9s ease forwards; }
 
 /* navegación de la galería: clic en el costado izquierdo / derecho */
 .prop-nav {
@@ -786,6 +793,7 @@ p { margin: 0 0 1rem; }
   .tilt-el { transform: none !important; }
   .reveal { opacity: 1; transform: none; transition: none; }
   .card-prop-media::before { display: none; }
+  .prop-foto-main::before { display: none; }
   .card-prop-media img { transition: none; }
   .card-prop:hover .card-prop-media img { transform: none; }
 }
