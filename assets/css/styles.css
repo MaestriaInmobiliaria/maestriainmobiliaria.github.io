@@ -247,9 +247,12 @@ p { margin: 0 0 1rem; }
   content: ""; position: absolute; inset: 0; z-index: 2; pointer-events: none;
   background: linear-gradient(115deg, transparent 42%, rgba(255,255,255,.32) 50%, transparent 58%);
   transform: translateX(-130%);
+  transition: transform 0s linear .01s; /* al salir, se reacomoda sin animar (evita el "eco" en la tarjeta vecina) */
+}
+.card-prop:hover .card-prop-media::before {
+  transform: translateX(130%);
   transition: transform .85s ease;
 }
-.card-prop:hover .card-prop-media::before { transform: translateX(130%); }
 .card-prop-op {
   position: absolute; top: .8rem; left: .8rem;
   background: var(--verde); color: var(--marfil);
