@@ -379,4 +379,19 @@
     }, { threshold: 0.15, rootMargin: "0px 0px -40px 0px" });
     revelables.forEach(function (el) { io.observe(el); });
   }
+
+  // en touch/mobile (sin puntero fino) el destello de la foto no tiene hover que lo dispare:
+  // se reproduce una vez cuando la tarjeta entra en pantalla
+  if (!tienePunteroFino && !sinMovimientoUI && "IntersectionObserver" in window) {
+    var mediasGlint = Array.prototype.slice.call(document.querySelectorAll(".card-prop-media"));
+    var ioGlint = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("glint-play");
+          ioGlint.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.4 });
+    mediasGlint.forEach(function (el) { ioGlint.observe(el); });
+  }
 })();

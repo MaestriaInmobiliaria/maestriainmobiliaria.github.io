@@ -253,6 +253,14 @@ p { margin: 0 0 1rem; }
   transform: translateX(130%);
   transition: transform .85s ease;
 }
+/* en touch/mobile (sin hover), el destello se reproduce solo al entrar en pantalla */
+.card-prop-media.glint-play::before {
+  animation: cardGlint .9s ease forwards;
+}
+@keyframes cardGlint {
+  from { transform: translateX(-130%); }
+  to   { transform: translateX(130%); }
+}
 .card-prop-op {
   position: absolute; top: .8rem; left: .8rem;
   background: var(--verde); color: var(--marfil);
