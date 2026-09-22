@@ -44,12 +44,8 @@
       {% if p.estado == 'reservada' %}<figcaption class="prop-badge">Reservada</figcaption>{% endif %}
     </figure>
     {% if p.fotos | length > 1 %}
-    <div class="prop-thumbs">
-      {% for f in p.fotos %}
-      <button type="button" class="prop-thumb{% if loop.first %} is-active{% endif %}" data-src="{{ f }}">
-        <img src="{{ f }}" alt="Foto {{ loop.index }} de {{ p.titulo }}" loading="lazy">
-      </button>
-      {% endfor %}
+    <div class="prop-thumbs" hidden>
+      {% for f in p.fotos %}<span class="prop-thumb{% if loop.first %} is-active{% endif %}" data-src="{{ f }}"></span>{% endfor %}
     </div>
     {% endif %}
   </div>

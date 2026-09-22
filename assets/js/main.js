@@ -61,13 +61,22 @@
       fotoMainFig.classList.add("glint-play");
     }
 
+    // sin miniaturas visibles: se precargan la foto siguiente y la anterior para que el cambio sea inmediato
+    function precargar(i) {
+      var n = (i % srcs.length + srcs.length) % srcs.length;
+      (new Image()).src = srcs[n];
+    }
+
     function mostrar(i) {
       idx = (i % srcs.length + srcs.length) % srcs.length;
       fotoMain.src = srcs[idx];
       thumbs.forEach(function (x, j) { x.classList.toggle("is-active", j === idx); });
       if (contador) contador.textContent = (idx + 1) + " / " + srcs.length;
       reproducirGlintGaleria();
+      precargar(idx + 1);
+      precargar(idx - 1);
     }
+    precargar(1);
 
     thumbs.forEach(function (t, i) {
       t.addEventListener("click", function () { mostrar(i); });
