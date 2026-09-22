@@ -73,6 +73,27 @@
     {% if p.url_convecta %}<a class="btn btn-outline btn-block" href="{{ p.url_convecta }}" target="_blank" rel="noopener">Ver publicación completa</a>{% endif %}
     <p class="prop-cod">Código: {{ p.codigo }}</p>
 
+    {% set share_url = site.url ~ p.url %}
+    {% set share_text = p.titulo ~ " — " ~ p.comuna ~ " · " ~ p.precio_fmt %}
+    <div class="prop-share">
+      <p class="prop-share-title">Compartir esta propiedad</p>
+      <div class="prop-share-row">
+        <a class="share-btn share-wa" href="https://wa.me/?text={{ (share_text ~ ' ' ~ share_url) | urlencode }}" target="_blank" rel="noopener" aria-label="Compartir por WhatsApp">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2c-5.5 0-9.96 4.46-9.96 9.96 0 1.76.46 3.48 1.34 5L2 22l5.2-1.36a9.9 9.9 0 0 0 4.84 1.24c5.5 0 9.96-4.46 9.96-9.96S17.54 2 12.04 2m0 18.2c-1.5 0-2.98-.4-4.27-1.16l-.3-.18-3.09.8.82-3-.2-.31a8.2 8.2 0 0 1-1.26-4.39c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.83 2.42a8.16 8.16 0 0 1 2.41 5.82c0 4.54-3.7 8.24-8.24 8.24m4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.8-.79.97-.14.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.14.17-.25.25-.41.08-.16.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.16 0-.43.06-.65.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.16 1.75 2.67 4.25 3.74.59.26 1.06.41 1.42.52.6.19 1.14.16 1.57.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28"/></svg>
+          <span>WhatsApp</span>
+        </a>
+        <a class="share-btn share-fb" href="https://www.facebook.com/sharer/sharer.php?u={{ share_url | urlencode }}" target="_blank" rel="noopener" aria-label="Compartir en Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.5 22v-8.2h2.8l.5-3.3h-3.3V8.4c0-.95.3-1.6 1.7-1.6h1.7V3.9c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.4H7.3v3.3h2.9V22h3.3z"/></svg>
+          <span>Facebook</span>
+        </a>
+        <button type="button" class="share-btn share-ig" id="shareIg" data-url="{{ share_url }}" data-title="{{ p.titulo }}" data-text="{{ share_text }}" aria-label="Compartir en Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor"/></svg>
+          <span>Instagram</span>
+        </button>
+      </div>
+      <p class="share-nota" id="shareNota" role="status" aria-live="polite" hidden></p>
+    </div>
+
     {% if p.agente_obj %}
     <div class="prop-agente">
       <img src="{{ p.agente_obj.foto }}" alt="{{ p.agente_obj.nombre }}" width="56" height="56">

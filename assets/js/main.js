@@ -85,6 +85,52 @@
     });
   }
 
+  // --- compartir propiedad: Instagram no tiene enlace web de compartir ---
+  // en móvil abre el menú nativo de compartir (ahí aparece Instagram); en escritorio copia el enlace
+  var shareIg = document.getElementById("shareIg");
+  if (shareIg) {
+    var shareNota = document.getElementById("shareNota");
+    var shareNotaT = null;
+    var avisar = function (txt) {
+      if (!shareNota) return;
+      shareNota.textContent = txt;
+      shareNota.hidden = false;
+      clearTimeout(shareNotaT);
+      shareNotaT = setTimeout(function () { shareNota.hidden = true; }, 7000);
+    };
+    var copiarEnlace = function (url) {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        return navigator.clipboard.writeText(url);
+      }
+      return new Promise(function (ok, fail) {
+        var ta = document.createElement("textarea");
+        ta.value = url;
+        ta.setAttribute("readonly", "");
+        ta.style.position = "fixed";
+        ta.style.opacity = "0";
+        document.body.appendChild(ta);
+        ta.select();
+        var bien = false;
+        try { bien = document.execCommand("copy"); } catch (e) {}
+        document.body.removeChild(ta);
+        bien ? ok() : fail();
+      });
+    };
+    shareIg.addEventListener("click", function () {
+      var datos = { title: shareIg.dataset.title, text: shareIg.dataset.text, url: shareIg.dataset.url };
+      var esTactil = window.matchMedia && window.matchMedia("(pointer: coarse)").matches;
+      if (esTactil && navigator.share) {
+        navigator.share(datos).catch(function () {});
+        return;
+      }
+      copiarEnlace(datos.url).then(function () {
+        avisar("Enlace copiado. Pégalo en tu historia, publicación o mensaje de Instagram.");
+      }).catch(function () {
+        avisar("No pudimos copiar el enlace: " + datos.url);
+      });
+    });
+  }
+
   // --- filtros del listado ---
   var form = document.getElementById("filtros");
   var lista = document.getElementById("listaProps");
