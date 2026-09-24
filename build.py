@@ -177,9 +177,10 @@ def build() -> None:
         dest.write_text(html, encoding="utf-8")
 
     render("index.html", "index.html",
-           destacadas=destacadas, total=len(disponibles), page="inicio")
+           destacadas=destacadas, total=len(props), page="inicio")
+    # el listado muestra todas (disponibles primero; las vendidas/reservadas con su franja)
     render("propiedades.html", "propiedades/index.html",
-           propiedades=disponibles, comunas=comunas, tipos=tipos,
+           propiedades=props, comunas=comunas, tipos=tipos,
            tipo_label=TIPO_LABEL, page="propiedades")
     for p in props:
         render("propiedad.html", f"propiedades/{p['slug']}/index.html",
