@@ -2,7 +2,7 @@ codigo: "9200"
 titulo: "Casa en San Pedro de la Costa"
 operacion: venta
 tipo: casa
-estado: disponible
+estado: vendida
 destacada: false
 precio: 1467
 moneda: UF
