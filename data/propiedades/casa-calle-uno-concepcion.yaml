@@ -2,7 +2,7 @@ codigo: "9081"
 titulo: "Casa en venta en Concepción"
 operacion: venta
 tipo: casa
-estado: disponible
+estado: vendida
 destacada: false
 precio: 1761
 moneda: UF
