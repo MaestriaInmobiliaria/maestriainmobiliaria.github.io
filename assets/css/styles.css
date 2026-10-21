@@ -827,3 +827,19 @@ p { margin: 0 0 1rem; }
   .card-prop-media img { transition: none; }
   .card-prop:hover .card-prop-media img { transform: none; }
 }
+
+/* ---------- mapa de ubicación aproximada (ficha de propiedad) ---------- */
+.section-mapa { padding-top: 0; }
+.prop-mapa {
+  position: relative; z-index: 0; isolation: isolate;
+  height: 340px; margin-top: 1rem;
+  border: 1px solid var(--gris-borde); border-radius: var(--radius);
+  background: #e9ece8; overflow: hidden;
+}
+.prop-mapa-nota { margin: .8rem 0 0; font-size: .85rem; color: var(--gris); }
+.mapa-pin span {
+  display: block; width: 22px; height: 22px; margin: 3px;
+  border-radius: 50%; background: var(--dorado);
+  border: 3px solid var(--verde); box-shadow: 0 0 0 4px rgba(198,161,91,.35), 0 4px 12px rgba(2,47,42,.45);
+}
+@media (max-width: 560px) { .prop-mapa { height: 280px; } }

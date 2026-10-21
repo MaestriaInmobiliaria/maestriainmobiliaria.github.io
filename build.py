@@ -127,7 +127,7 @@ def build() -> None:
     DIST.mkdir(parents=True)
 
     # assets -> dist raiz (css/, js/, img/)
-    for sub in ("css", "js", "img"):
+    for sub in ("css", "js", "img", "vendor"):
         src = ASSETS / sub
         if src.exists():
             shutil.copytree(src, DIST / sub)

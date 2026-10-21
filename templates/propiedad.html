@@ -6,6 +6,10 @@
 {% block ogimage %}{{ p.portada }}{% endblock %}
 
 {% block head %}
+{% if p.ubicacion_aprox %}
+<link rel="stylesheet" href="/vendor/leaflet/leaflet.css">
+<script src="/vendor/leaflet/leaflet.js" defer></script>
+{% endif %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -106,6 +110,16 @@
   <div class="wrap prose-wrap">
     <h2>Descripción</h2>
     <div class="prose">{{ p.descripcion_html | safe }}</div>
+  </div>
+</section>
+{% endif %}
+
+{% if p.ubicacion_aprox %}
+<section class="section section-mapa">
+  <div class="wrap prose-wrap">
+    <h2>Ubicación</h2>
+    <div class="prop-mapa" id="propMapa" data-lat="{{ p.ubicacion_aprox.lat }}" data-lng="{{ p.ubicacion_aprox.lng }}" role="img" aria-label="Mapa con la ubicación aproximada de la propiedad"></div>
+    <p class="prop-mapa-nota">Ubicación referencial del sector. La dirección exacta se entrega al coordinar tu visita con nuestro equipo.</p>
   </div>
 </section>
 {% endif %}

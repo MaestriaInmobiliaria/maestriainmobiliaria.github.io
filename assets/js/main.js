@@ -140,6 +140,46 @@
     });
   }
 
+  // --- mapa de ubicación aproximada (ficha de propiedad) ---
+  // el punto que llega ya viene desplazado ~300 m desde el build; además se limita el zoom
+  // máximo para que no se pueda acercar hasta identificar la casa
+  var mapaEl = document.getElementById("propMapa");
+  if (mapaEl && window.L) {
+    var iniciarMapa = function () {
+      if (mapaEl.dataset.listo) return;
+      mapaEl.dataset.listo = "1";
+      var lat = parseFloat(mapaEl.dataset.lat), lng = parseFloat(mapaEl.dataset.lng);
+      if (isNaN(lat) || isNaN(lng)) return;
+      var tactil = window.matchMedia && window.matchMedia("(pointer: coarse)").matches;
+      var mapa = L.map(mapaEl, {
+        center: [lat, lng], zoom: 15, minZoom: 13, maxZoom: 15,
+        scrollWheelZoom: false, doubleClickZoom: false, boxZoom: false,
+        dragging: !tactil, touchZoom: false, keyboard: false
+      });
+      mapa.attributionControl.setPrefix(false);
+      L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 15,
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>'
+      }).addTo(mapa);
+      L.circle([lat, lng], {
+        radius: 450, color: "#c6a15b", weight: 1.5,
+        fillColor: "#c6a15b", fillOpacity: 0.14, interactive: false
+      }).addTo(mapa);
+      L.marker([lat, lng], {
+        icon: L.divIcon({ className: "mapa-pin", html: "<span></span>", iconSize: [28, 28], iconAnchor: [14, 14] }),
+        interactive: false, keyboard: false
+      }).addTo(mapa);
+    };
+    if ("IntersectionObserver" in window) {
+      var ioMapa = new IntersectionObserver(function (entries) {
+        if (entries[0].isIntersecting) { iniciarMapa(); ioMapa.disconnect(); }
+      }, { rootMargin: "300px 0px" });
+      ioMapa.observe(mapaEl);
+    } else {
+      iniciarMapa();
+    }
+  }
+
   // --- filtros del listado ---
   var form = document.getElementById("filtros");
   var lista = document.getElementById("listaProps");
