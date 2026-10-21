@@ -79,3 +79,6 @@ agente: jonathan-fox
 url_convecta: ""
 lat: null
 lng: null
+ubicacion_aprox:
+  lat: -36.85146
+  lng: -73.13713

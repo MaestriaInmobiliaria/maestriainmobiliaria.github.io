@@ -90,3 +90,6 @@ agente: camila-cardenas
 url_convecta: ""
 lat: null
 lng: null
+ubicacion_aprox:
+  lat: -36.94836
+  lng: -73.01416

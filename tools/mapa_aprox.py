@@ -9,6 +9,7 @@ ningun dato publico: se podria invertir el desplazamiento.
 Uso:
     python tools/mapa_aprox.py LAT LNG                     # solo imprime el punto desplazado
     python tools/mapa_aprox.py LAT LNG --aplicar SLUG      # y lo escribe en data/propiedades/SLUG.yaml
+    python tools/mapa_aprox.py LAT LNG --escribir SLUG     # escribe LAT LNG TAL CUAL (ya desplazados)
 """
 from __future__ import annotations
 
@@ -52,9 +53,14 @@ def main() -> None:
     ap.add_argument("lat", type=float)
     ap.add_argument("lng", type=float)
     ap.add_argument("--aplicar", metavar="SLUG")
+    ap.add_argument("--escribir", metavar="SLUG")
     a = ap.parse_args()
     if not (-90 <= a.lat <= 90 and -180 <= a.lng <= 180):
         raise SystemExit("Coordenadas fuera de rango")
+    if a.escribir:
+        aplicar(a.escribir, a.lat, a.lng)
+        print(f"{a.escribir}: ubicacion_aprox escrita (sin desplazar)")
+        return
     lat2, lng2 = desplazar(a.lat, a.lng)
     if a.aplicar:
         aplicar(a.aplicar, lat2, lng2)
