@@ -4,8 +4,8 @@ operacion: venta
 tipo: departamento
 estado: disponible
 destacada: false
-precio: 1650
-moneda: UF
+precio: 68000000
+moneda: CLP
 comuna: "San Pedro de la Paz"
 ciudad: "San Pedro de la Paz"
 sector: "Costa Norte"
@@ -69,7 +69,7 @@ descripcion: |
   El mobiliario que aparece en las fotografías no forma parte de la venta; el
   departamento se entrega sin amoblar, e incluye solo muebles de cocina.
 
-  Valor: 1.650 UF (aprox. $68.000.000). Agenda tu visita hoy y conoce en persona
+  Valor: $68.000.000. Agenda tu visita hoy y conoce en persona
   este departamento en Costa Norte, a pasos de Estación Costa Mar y del
   supermercado Lider.
 fotos:
