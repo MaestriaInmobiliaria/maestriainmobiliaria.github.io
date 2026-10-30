@@ -189,6 +189,7 @@ def build() -> None:
     render("vender.html", "vende-con-nosotros/index.html", page="vender")
     render("nosotros.html", "nosotros/index.html", page="nosotros")
     render("contacto.html", "contacto/index.html", page="contacto")
+    render("privacidad.html", "privacidad/index.html", page="privacidad")
 
     # landings personales de marca por agente (no van en el nav principal)
     landing_urls = []
@@ -216,7 +217,7 @@ def build() -> None:
 
 def _write_extra(site: dict, props: list[dict], asset_v: str = "1", landing_urls: list[str] | None = None) -> None:
     base = site.get("url", "https://www.maestriainmobiliaria.cl").rstrip("/")
-    urls = ["/", "/propiedades/", "/vende-con-nosotros/", "/nosotros/", "/contacto/", "/blog/"]
+    urls = ["/", "/propiedades/", "/vende-con-nosotros/", "/nosotros/", "/contacto/", "/privacidad/", "/blog/"]
     urls += [f"/{u}/" for u in (landing_urls or [])]
     urls += [p["url"] for p in props]
     today = dt.date.today().isoformat()
