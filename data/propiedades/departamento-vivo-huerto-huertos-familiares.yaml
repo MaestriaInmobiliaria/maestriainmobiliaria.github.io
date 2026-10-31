@@ -2,7 +2,7 @@ codigo: "9008"
 titulo: "Departamento en Edificio Vivo Huerto, Huertos Familiares"
 operacion: venta
 tipo: departamento
-estado: disponible
+estado: vendida
 destacada: true
 precio: 2700
 moneda: UF
