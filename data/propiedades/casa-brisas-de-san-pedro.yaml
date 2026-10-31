@@ -4,8 +4,8 @@ operacion: venta
 tipo: casa
 estado: disponible
 destacada: true
-precio: 2372
-moneda: UF
+precio: 95000000
+moneda: CLP
 comuna: "San Pedro de la Paz"
 ciudad: "Concepción"
 sector: "Condominio Brisas de San Pedro"
