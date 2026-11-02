@@ -4,7 +4,7 @@ operacion: venta
 tipo: casa
 estado: disponible
 destacada: false
-precio: 60000000
+precio: 55000000
 moneda: CLP
 comuna: "Hualpén"
 ciudad: "Concepción"
@@ -53,7 +53,7 @@ descripcion: |
   **SERVICIOS Y ENTORNO:**
   Cuenta con agua corriente, alcantarillado, línea telefónica y acceso a internet, con orientación al sol. Admite mascotas. Se ubica en Peñuelas III, a pasos de supermercados y CESFAM.
 
-  Valor: $60.000.000 (aprox. 1.468 UF). Agenda tu visita con Maestría Inmobiliaria y descubre el potencial de esta casa.
+  Valor: $55.000.000. Agenda tu visita con Maestría Inmobiliaria y descubre el potencial de esta casa.
 fotos:
   - 01.jpg
   - 02.jpg
