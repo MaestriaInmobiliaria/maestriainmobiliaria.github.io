@@ -64,4 +64,21 @@
     <p class="empty" id="sinResultados" hidden>No hay propiedades con esos filtros. Prueba ampliando la búsqueda.</p>
   </div>
 </section>
+
+{% if vendidas %}
+<section class="section section-soft section-vendidas">
+  <div class="wrap">
+    <p class="eyebrow">Resultados</p>
+    <h2>Últimas ventas concretadas</h2>
+    <p class="section-sub vendidas-intro">Propiedades que ya encontraron comprador con nuestro método.</p>
+    <div class="grid-props" id="listaVendidas">
+      {% for p in vendidas %}
+      <div class="prop-item">
+        {{ ui.tarjeta(p) }}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
 {% endblock %}

@@ -178,9 +178,13 @@ def build() -> None:
 
     render("index.html", "index.html",
            destacadas=destacadas, total=len(props), page="inicio")
-    # el listado muestra todas (disponibles primero; las vendidas/reservadas con su franja)
+    # el listado separa el inventario (disponibles/reservadas) de las ventas concretadas
+    inventario = [p for p in props if p.get("estado") != "vendida"]
+    vendidas = [p for p in props if p.get("estado") == "vendida"]
     render("propiedades.html", "propiedades/index.html",
-           propiedades=props, comunas=comunas, tipos=tipos,
+           propiedades=inventario, vendidas=vendidas,
+           comunas=sorted({p["comuna"] for p in inventario if p.get("comuna")}),
+           tipos=sorted({p["tipo"] for p in inventario if p.get("tipo")}),
            tipo_label=TIPO_LABEL, page="propiedades")
     for p in props:
         render("propiedad.html", f"propiedades/{p['slug']}/index.html",
