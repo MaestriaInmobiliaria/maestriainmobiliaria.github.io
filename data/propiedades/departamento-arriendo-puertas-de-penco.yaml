@@ -1,0 +1,113 @@
+codigo: "NX-00069"
+titulo: "Departamento en arriendo, Puertas de Penco, Penco"
+operacion: arriendo
+tipo: departamento
+estado: disponible
+destacada: false
+precio: 450000
+moneda: CLP
+comuna: "Penco"
+ciudad: "Concepción"
+sector: "Puertas de Penco"
+dormitorios: 3
+banos: 2
+estacionamientos: 1
+superficie_util: 58
+superficie_terreno: 0
+caracteristicas:
+  - "Departamento de 60 m² totales: 58 m² útiles y 2 m² de terraza"
+  - "3 dormitorios alfombrados con closets empotrados y 2 baños completos, uno con tina"
+  - "Living-comedor integrado con piso cerámico y ventanales, cocina abierta con encimera de granito y cocina a gas"
+  - "Logia independiente con calefón y lavadero"
+  - "Incluye 1 estacionamiento de uso exclusivo"
+  - "Edificio de 2021 en condominio con acceso controlado y conserjería 24 h"
+  - "Quincho, sala multiuso, juegos infantiles, áreas verdes y estacionamientos de visitas"
+  - "Admite mascotas"
+  - "Disponible sin amoblar ($450.000) o semiamoblado ($470.000); gastos comunes aprox. $47.000 aparte"
+descripcion: |
+  **TU NUEVO HOGAR EN PENCO: LUMINOSO, CON BALCÓN Y ÁREAS VERDES A TU ALCANCE**
+
+  Departamento de 3 dormitorios y 2 baños, de 60 m², en un edificio de 2021 en el
+  sector Puertas de Penco, comuna de Penco. Un hogar luminoso, con balcón, logia y
+  un entorno de áreas verdes, quincho y juegos infantiles, a minutos de la playa y
+  del centro de Penco.
+
+  **REQUISITOS PARA ARRENDAR:**
+
+  - Sueldo equivalente a 3 veces el valor del arriendo.
+  - Contrato de trabajo indefinido.
+  - Últimas 6 liquidaciones de sueldo.
+  - Últimas 12 cotizaciones de AFP.
+  - No tener deudas en Dicom.
+
+  **LIVING Y COMEDOR:**
+  Living y comedor integrados en un solo espacio amplio, con piso cerámico,
+  ventanales y cortinas que dejan entrar la luz natural. Conectan directamente con
+  el balcón.
+
+  **COCINA:**
+  Cocina abierta al comedor, con encimera de granito, cocina a gas y muebles de
+  madera con cajones y espacio de guardado.
+
+  **LOGIA:**
+  Logia independiente con calefón y lavadero, lista para instalar tu lavadora.
+
+  **DORMITORIOS:**
+  Tres dormitorios alfombrados con closets empotrados de puertas correderas,
+  cómodos y con buena iluminación natural.
+
+  **BAÑOS:**
+  Dos baños completos, uno de ellos con tina y cerámicas decorativas, con
+  lavamanos de pedestal e inodoro.
+
+  **BALCÓN:**
+  Balcón con vista despejada, un lugar perfecto para tomar el café de la mañana o
+  descansar al final del día.
+
+  **ESTACIONAMIENTO:**
+  Incluye 1 estacionamiento de uso exclusivo.
+
+  **ARRIENDO SEMIAMOBLADO:**
+  Disponible también en modalidad semiamoblada, que incluye refrigerador,
+  lavadora, mesa con sillas, mueble, cama, velador y sofá. Esta modalidad no está
+  incluida en el arriendo sin amoblar.
+
+  **ENTORNO:**
+  Edificio de 2021 en un conjunto con áreas verdes, plaza, juegos infantiles,
+  quincho, sala de eventos, estacionamientos de visitas y cerco perimetral. Sector
+  tranquilo, a minutos de la playa y del centro de Penco.
+
+  **VALOR DEL ARRIENDO:**
+  Sin amoblar: $450.000 mensuales. Semiamoblado: $470.000 mensuales. Los gastos
+  comunes (aprox. $47.000) son aparte y los paga el arrendatario.
+
+  Agenda tu visita hoy y conoce el que puede ser tu próximo hogar. Atención de
+  lunes a sábado de 09:00 a 20:00 hrs.
+fotos:
+  - 01.jpg
+  - 02.jpg
+  - 03.jpg
+  - 04.jpg
+  - 05.jpg
+  - 06.jpg
+  - 07.jpg
+  - 08.jpg
+  - 09.jpg
+  - 10.jpg
+  - 11.jpg
+  - 12.jpg
+  - 13.jpg
+  - 14.jpg
+  - 15.jpg
+  - 16.jpg
+  - 17.jpg
+  - 18.jpg
+  - 19.jpg
+  - 20.jpg
+  - 21.jpg
+  - 22.jpg
+  - 23.jpg
+agente: jonathan-fox
+url_convecta: ""
+lat: null
+lng: null
