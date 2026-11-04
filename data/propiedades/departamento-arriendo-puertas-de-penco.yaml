@@ -15,19 +15,19 @@ estacionamientos: 1
 superficie_util: 58
 superficie_terreno: 0
 caracteristicas:
-  - "Departamento de 60 m² totales: 58 m² útiles y 2 m² de terraza"
-  - "3 dormitorios alfombrados con closets empotrados, 1 baño completo con tina y 1 medio baño para visitas"
+  - "Departamento de 60 m² totales (58 m² útiles y 2 m² de terraza), ubicado en el tercer piso"
+  - "3 dormitorios alfombrados con closets empotrados, 1 baño completo con tina y 1 medio baño para visitas (lavamanos de pedestal e inodoro)"
   - "Living-comedor integrado con piso cerámico y ventanales, cocina abierta con cocina a gas"
   - "Logia independiente con calefón y lavadero"
   - "Incluye 1 estacionamiento de uso exclusivo"
   - "Edificio de 2021 en condominio con acceso controlado y conserjería 24 h"
   - "Quincho, sala multiuso, juegos infantiles, áreas verdes y estacionamientos de visitas"
   - "No se permiten mascotas"
-  - "Disponible sin amoblar ($450.000) o semiamoblado ($470.000); gastos comunes aprox. $47.000 aparte"
+  - "Disponible sin amoblar ($450.000) o semiamoblado ($470.000, incluye lavadora/secadora); gastos comunes aprox. $47.000 aparte"
 descripcion: |
   **TU NUEVO HOGAR EN PENCO: LUMINOSO, CON BALCÓN Y ÁREAS VERDES A TU ALCANCE**
 
-  Departamento de 3 dormitorios, un baño completo y un medio baño, de 60 m², en un edificio de 2021 en el
+  Departamento de 3 dormitorios, un baño completo y un medio baño, de 60 m², ubicado en el tercer piso de un edificio de 2021 en el
   sector Puertas de Penco, comuna de Penco. Un hogar luminoso, con balcón, logia y
   un entorno de áreas verdes, quincho y juegos infantiles, a minutos de la playa y
   del centro de Penco.
@@ -58,7 +58,7 @@ descripcion: |
   cómodos y con buena iluminación natural.
 
   **BAÑOS:**
-  Un baño completo con tina, cerámicas decorativas, lavamanos de pedestal e inodoro, y un medio baño para visitas.
+  Un baño completo con tina y cerámicas decorativas, y un medio baño para visitas con lavamanos de pedestal e inodoro.
 
   **BALCÓN:**
   Balcón con vista despejada, un lugar perfecto para tomar el café de la mañana o
@@ -68,8 +68,7 @@ descripcion: |
   Incluye 1 estacionamiento de uso exclusivo.
 
   **ARRIENDO SEMIAMOBLADO:**
-  Disponible también en modalidad semiamoblada, que incluye refrigerador,
-  lavadora, mesa con sillas, mueble, cama, velador y sofá. Esta modalidad no está
+  Disponible también en modalidad semiamoblada, que incluye refrigerador, lavadora/secadora, mesa con sillas, mueble, cama, velador y sofá. Esta modalidad no está
   incluida en el arriendo sin amoblar.
 
   **ENTORNO:**
