@@ -54,7 +54,8 @@
       <ul>
         <li><span>Email</span><a href="mailto:{{ site.contacto.email }}">{{ site.contacto.email }}</a></li>
         {% if site.contacto.telefono %}<li><span>Teléfono</span><a href="tel:{{ site.contacto.telefono | replace(' ','') }}">{{ site.contacto.telefono }}</a></li>{% endif %}
-        {% if site.contacto.whatsapp %}<li><span>WhatsApp</span><a href="https://wa.me/{{ site.contacto.whatsapp }}" target="_blank" rel="noopener">Escribir por WhatsApp</a></li>{% endif %}
+        {% if site.contacto.whatsapp %}<li><span>WhatsApp · Comprar</span><a href="https://wa.me/{{ site.contacto.whatsapp }}?text=Hola,%20quiero%20comprar%20una%20propiedad." target="_blank" rel="noopener">Escribir para comprar</a></li>{% endif %}
+        {% if site.contacto.whatsapp_captacion %}<li><span>WhatsApp · Vender</span><a href="https://wa.me/{{ site.contacto.whatsapp_captacion }}?text=Hola,%20quiero%20vender%20mi%20propiedad." target="_blank" rel="noopener">Escribir para vender</a></li>{% endif %}
         <li><span>Horario</span>{{ site.contacto.horario }}</li>
         <li><span>Zona</span>{{ site.contacto.ciudad }}</li>
       </ul>

@@ -25,8 +25,8 @@ agentes:
         V.I.E. Advanced ordena ese proceso de principio a fin —evaluación con
         datos reales, difusión profesional y un solo interlocutor— para que
         vendas al mejor precio posible, sin sorpresas en el camino.
-      wa_text_hero: "Hola Jonathan, quiero mi evaluación comercial gratuita para vender mi propiedad."
-      wa_text_cta: "Hola Jonathan, quiero agendar mi evaluación comercial gratuita para vender mi propiedad."
+      wa_text_hero: "Hola Jonathan, quiero mi evaluación comercial sin costo para vender mi propiedad."
+      wa_text_cta: "Hola Jonathan, quiero agendar mi evaluación comercial sin costo para vender mi propiedad."
       cta_hero_boton: "Pide tu evaluación gratis por WhatsApp"
       stats:
         - { valor: "90", label: "Días o menos, método de venta" }
@@ -56,9 +56,9 @@ agentes:
         - "Reportes periódicos: siempre vas a saber en qué va tu venta"
         - "Gestión de documentos y trámites legales, incluidas ventas por herencia con varios herederos"
         - "Negociación y acompañamiento hasta la firma de la escritura"
-      cta_titulo: "Pide tu evaluación comercial gratuita"
+      cta_titulo: "Pide tu evaluación comercial sin costo"
       cta_texto: "Sin costo ni compromiso: sabrás cuánto vale realmente tu propiedad hoy."
-      cta_boton: "Quiero mi evaluación gratuita"
+      cta_boton: "Quiero mi evaluación sin costo"
 
   - slug: camila-cardenas
     nombre: "Camila Cárdenas"
@@ -78,7 +78,7 @@ agentes:
         venderlo al mejor precio, con el Método V.I.E. Advanced y un
         acompañamiento cercano en cada etapa.
       wa_text_hero: "Hola Camila, quiero conversar sobre la venta de mi propiedad."
-      wa_text_cta: "Hola Camila, quiero agendar una llamada de asesoría gratuita para vender mi propiedad."
+      wa_text_cta: "Hola Camila, quiero agendar una llamada de asesoría sin costo para vender mi propiedad."
       stats:
         - { valor: "90", label: "Días, método de venta" }
         - { valor: "V.I.E.", label: "Método de Maestría Inmobiliaria" }
@@ -117,7 +117,7 @@ agentes:
         mercado y estrategia para evaluar y posicionar tu propiedad hacia una
         venta efectiva, con el Método V.I.E. Advanced.
       wa_text_hero: "Hola Nicolás, quiero conversar sobre la venta de mi propiedad."
-      wa_text_cta: "Hola Nicolás, quiero agendar una llamada de asesoría gratuita para vender mi propiedad."
+      wa_text_cta: "Hola Nicolás, quiero agendar una llamada de asesoría sin costo para vender mi propiedad."
       stats:
         - { valor: "90", label: "Días, método de venta" }
         - { valor: "V.I.E.", label: "Método de Maestría Inmobiliaria" }

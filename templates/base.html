@@ -79,7 +79,8 @@
         <li><a href="mailto:{{ site.contacto.email }}">{{ site.contacto.email }}</a></li>
         {% if site.contacto.telefono %}<li><a href="tel:{{ site.contacto.telefono | replace(' ', '') }}">{{ site.contacto.telefono }} · Ventas</a></li>{% endif %}
         {% if site.contacto.telefono_captacion %}<li><a href="tel:{{ site.contacto.telefono_captacion | replace(' ', '') }}">{{ site.contacto.telefono_captacion }} · Propietarios</a></li>{% endif %}
-        {% if site.contacto.whatsapp %}<li><a href="https://wa.me/{{ site.contacto.whatsapp }}">WhatsApp</a></li>{% endif %}
+        {% if site.contacto.whatsapp %}<li><a href="https://wa.me/{{ site.contacto.whatsapp }}?text=Hola,%20quiero%20comprar%20una%20propiedad." target="_blank" rel="noopener">WhatsApp · Quiero comprar</a></li>{% endif %}
+        {% if site.contacto.whatsapp_captacion %}<li><a href="https://wa.me/{{ site.contacto.whatsapp_captacion }}?text=Hola,%20quiero%20vender%20mi%20propiedad." target="_blank" rel="noopener">WhatsApp · Quiero vender</a></li>{% endif %}
         <li>{{ site.contacto.horario }}</li>
         <li>{{ site.contacto.ciudad }}</li>
       </ul>

@@ -38,7 +38,6 @@ zonas:
   - "Talcahuano"
   - "Hualpén"
   - "Chiguayante"
-  - "Penco"
 
 nav:
   - { label: "Inicio", url: "/" }

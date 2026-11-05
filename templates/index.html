@@ -94,4 +94,17 @@
     <a class="btn btn-gold" href="/contacto/">Solicitar estimación</a>
   </div>
 </section>
+
+<section class="section">
+  <div class="wrap cta-band">
+    <div>
+      <h2>¿En qué te ayudamos?</h2>
+      <p>Escríbenos directo por WhatsApp: cada línea atiende un tipo de consulta.</p>
+    </div>
+    <div class="hero-actions">
+      {% if site.contacto.whatsapp_captacion %}<a class="btn btn-gold" href="https://wa.me/{{ site.contacto.whatsapp_captacion }}?text=Hola,%20quiero%20vender%20mi%20propiedad." target="_blank" rel="noopener">Quiero vender mi propiedad</a>{% endif %}
+      {% if site.contacto.whatsapp %}<a class="btn btn-outline" href="https://wa.me/{{ site.contacto.whatsapp }}?text=Hola,%20quiero%20comprar%20una%20propiedad." target="_blank" rel="noopener">Quiero comprar una propiedad</a>{% endif %}
+    </div>
+  </div>
+</section>
 {% endblock %}
