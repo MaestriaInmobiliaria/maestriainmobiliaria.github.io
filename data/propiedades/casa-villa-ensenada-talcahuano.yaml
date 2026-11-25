@@ -1,0 +1,109 @@
+codigo: "NX-00195"
+titulo: "Casa en venta, Villa Ensenada, Talcahuano"
+operacion: venta
+tipo: casa
+estado: disponible
+destacada: false
+precio: 120000000
+moneda: CLP
+comuna: "Talcahuano"
+ciudad: "Talcahuano"
+sector: "Villa Ensenada"
+dormitorios: 5
+banos: 2
+estacionamientos: 2
+superficie_util: 126
+superficie_terreno: 131
+caracteristicas:
+  - "Casa aislada de 2 pisos"
+  - "5 habitaciones y 2 baños (uno por nivel)"
+  - "Garage techado para 2 vehículos"
+  - "Patio con jardín formado"
+  - "Loggia y bodega"
+  - "Estufa a combustión lenta incluida en la venta"
+  - "Propiedad regularizada, con ampliación regularizada"
+  - "Apta para crédito hipotecario"
+  - "Admite mascotas"
+descripcion: |
+  **TU CASA DE 2 PISOS CON PATIO Y GARAGE TECHADO EN VILLA ENSENADA, A MINUTOS DEL CENTRO**
+
+  Imagina llegar a una casa aislada de 2 pisos, con 126 m² construidos en un terreno de 131 m², ubicada en sector Villa Ensenada, Talcahuano, a minutos del Centro y del Mall del Trébol. Con 5 habitaciones, 2 baños, patio con jardín y garage techado para 2 vehículos, está pensada para quienes buscan espacio, comodidad y un hogar listo para vivir en familia.
+
+  **LIVING Y COMEDOR:**
+
+  El living y el comedor tienen piso cerámico y reciben el sol de la mañana, con una orientación sur-este que aporta luz natural durante el día. Son espacios cómodos para recibir y compartir en familia.
+
+  **COCINA Y COMEDOR DE DIARIO:**
+
+  Cocina independiente, con piso cerámico y comedor de diario, ideal para las comidas cotidianas sin interrumpir el resto de la casa. Cuenta con calefón para el agua caliente.
+
+  **DORMITORIOS:**
+
+  La casa cuenta con 5 habitaciones con piso flotante, una de ellas en el primer nivel. Junto al dormitorio principal hay un espacio versátil que puedes usar como amplio walk-in closet o como quinto dormitorio, según lo que necesite tu familia.
+
+  **BAÑOS:**
+
+  Dos baños con piso cerámico, uno en el primer nivel y otro en el segundo, para mayor comodidad en el día a día.
+
+  **LOGGIA:**
+
+  Cuenta con loggia, un espacio práctico para las labores del hogar.
+
+  **ESTACIONAMIENTO:**
+
+  Garage techado con capacidad para 2 vehículos.
+
+  **BODEGA:**
+
+  Incluye bodega, un espacio extra de guardado.
+
+  **PATIO Y JARDÍN:**
+
+  Patio con jardín formado y sol de tarde, un lugar agradable para compartir al aire libre o para que jueguen los niños y las mascotas.
+
+  **CALEFACCIÓN:**
+
+  Cuenta con estufa a combustión lenta, que queda incluida en la venta de la propiedad, para mantener la casa temperada en invierno.
+
+  **ESTADO DE LA PROPIEDAD:**
+
+  Propiedad regularizada, con ampliación regularizada, apta para crédito hipotecario. Cuenta con agua potable, alcantarillado, línea telefónica y acceso a internet. Admite mascotas.
+
+  **ENTORNO:**
+
+  Se ubica en sector Villa Ensenada, Talcahuano, a minutos del Centro y del Mall del Trébol.
+
+  Valor: 2.905 UF (aprox. $120.000.000). Agenda tu visita hoy y conoce en persona esta casa en Villa Ensenada, a minutos del Centro y del Mall del Trébol.
+fotos:
+  - 01.jpg
+  - 02.jpg
+  - 03.jpg
+  - 04.jpg
+  - 05.jpg
+  - 06.jpg
+  - 07.jpg
+  - 08.jpg
+  - 09.jpg
+  - 10.jpg
+  - 11.jpg
+  - 12.jpg
+  - 13.jpg
+  - 14.jpg
+  - 15.jpg
+  - 16.jpg
+  - 17.jpg
+  - 18.jpg
+  - 19.jpg
+  - 20.jpg
+  - 21.jpg
+  - 22.jpg
+  - 23.jpg
+  - 24.jpg
+  - 25.jpg
+agente: jonathan-fox
+url_convecta: ""
+lat: null
+lng: null
+ubicacion_aprox:
+  lat: -36.76477
+  lng: -73.09615
