@@ -127,7 +127,7 @@ def build() -> None:
     DIST.mkdir(parents=True)
 
     # assets -> dist raiz (css/, js/, img/)
-    for sub in ("css", "js", "img", "vendor"):
+    for sub in ("css", "js", "img", "vendor", "video"):
         src = ASSETS / sub
         if src.exists():
             shutil.copytree(src, DIST / sub)
@@ -210,6 +210,11 @@ def build() -> None:
     if zona.get("activa"):
         zona["modulos"] = sorted(zona.get("modulos", []), key=lambda m: m.get("orden", 99))
         render("zona-miembros.html", "zona-miembros/index.html", zona=zona, page="zona-miembros")
+    # guias en video OCULTAS: sin menu, sin sitemap, noindex; se entra solo por enlace directo
+    ocultas = load_yaml(DATA / "guias_ocultas.yaml") if (DATA / "guias_ocultas.yaml").exists() else {}
+    for g in ocultas.get("guias", []):
+        render("guia-oculta.html", f"{ocultas['carpeta']}/{g['slug']}/index.html",
+               g=g, carpeta=ocultas["carpeta"], page="guia-oculta", nav_simple=True)
     render("blog.html", "blog/index.html", posts=posts, page="blog")
     for post in posts:
         render("blog-post.html", f"blog/{post['slug']}/index.html", post=post, page="blog")
