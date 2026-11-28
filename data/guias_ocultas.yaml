@@ -3,12 +3,12 @@
 carpeta: guias-x7q4m2
 guias:
   - slug: avaluo-detallado-youtube
-    titulo: "Cómo sacar el Certificado de Avalúo Fiscal Detallado (versión YouTube, horizontal)"
+    titulo: "Cómo sacar el Certificado de Avalúo Fiscal Detallado"
     video: /video/guias/avaluo-detallado-horizontal.mp4
     poster: /video/guias/avaluo-detallado-horizontal.jpg
     formato: horizontal
   - slug: avaluo-detallado-reel
-    titulo: "Cómo sacar el Certificado de Avalúo Fiscal Detallado (versión reel, vertical)"
+    titulo: "Cómo sacar el Certificado de Avalúo Fiscal Detallado"
     video: /video/guias/avaluo-detallado-vertical.mp4
     poster: /video/guias/avaluo-detallado-vertical.jpg
     formato: vertical
